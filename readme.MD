@@ -1,2 +1,3 @@
-# If you are a designer and wanna make new template design, please use our figma template:
-https://www.figma.com/file/qVqWpIs9x6yk1k3QDThxYa/Food?type=design&node-id=0%3A1&mode=design&t=hBldDWId9ZB74YS0-1
+# Startup food store of Maksym Tarasov
+## Figma design
+https://www.figma.com/file/gKk2NvrpWVJJNUwd8UNIiw/startup-food-store-maksymtarasov
