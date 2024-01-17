@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -151,3 +152,17 @@
 </footer>
 
 <script src="/template/js/slider.js"></script>
+=======
+{% for product in top_products %}
+	<h1>{{{product.name}}}</h1>
+	<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
+{% endfor %}
+{% for product in products %}
+	<h1>{{{product.name}}}</h1>
+	<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
+{% endfor %}
+{% for article in articles %}
+	<h1>{{{article.name}}}</h1>
+	<img src="{{{article.thumb}}}" alt="{{{article.name}}}">
+{% endfor %}
+>>>>>>> 8fa3ce9682735047abf6c36e8f6ad138a608be04
