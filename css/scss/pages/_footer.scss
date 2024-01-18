@@ -2,7 +2,6 @@
 
 .footer {
   background-color: #111111;
-  
 
   ul {
     margin: 0;
@@ -96,25 +95,6 @@
     background-color: #0c4314;
     border-radius: 8px;
     margin-bottom: 20px;
-  }
-
-  &__btn {
-    min-height: 48px;
-    min-width: 48px;
-    border: 1px solid #333333;
-    border-radius: 8px;
-    font-size: 14px;
-    line-height: 1.2;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 0 16px;
-    color: #f8f8f8;
-    background-color: #111111;
-    transition: border-color 0.3s ease;
-
-    &:hover {
-      border-color: #115e1d;
-    }
   }
 }
 

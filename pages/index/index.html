@@ -1,4 +1,3 @@
-
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -36,6 +35,76 @@
     <div class="swiper-pagination"></div>
   </div>
 </section>
+
+<main>
+  <div class="container main-container">
+    <section class="menu">menu</section>
+    <section class="food">food</section>
+    <section class="information">
+      <div class="information__search">
+        <form>
+          <input type="text" placeholder="Назва страви" />
+          <button type="submit">
+            <img src="/template/img/icons/search.svg" alt="search" />
+          </button>
+        </form>
+      </div>
+      <div class="informaton__data">
+        <div class="information__title">Інформація про заклад</div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/wifi.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">WiFi</div>
+            <div class="information-item__descr">12345678</div>
+          </div>
+        </div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/watch.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">Робочий час:</div>
+            <div class="information-item__descr">11:00 - 22:00</div>
+          </div>
+        </div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/home.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">Адреса:</div>
+            <div class="information-item__descr">
+              Ploshcha Polʹsʹkyy Rynok, 5C, Kamianets'-podil's'kyi,
+              Khmel'nyts'ka oblast, Ukraine, 00000
+            </div>
+          </div>
+        </div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/phone.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">Телефон:</div>
+            <div class="information-item__descr">+380686080000</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#">
+        <button class="information__btn btn">
+          <img src="/template/img/icons/message.svg" alt="" /> Надіслати відгук
+        </button>
+      </a>
+
+      <div class="information__descr">
+        Винний погріб, дегустація вина, 🍕неаполітанська піца на дровах
+        🍝італійська паста 🥩🍤м‘ясо та риба на грилі чи з печі, авторські суші.
+      </div>
+    </section>
+  </div>
+</main>
 
 <footer class="footer">
   <div class="container footer__inner">
@@ -130,7 +199,12 @@
       <div class="footer-map">
         <div class="footer__title">На карті</div>
         <div class="footer-map__place"></div>
-        <button class="footer-map__btn">Отримати розташування</button>
+        <a href="#">
+          <button class="footer-map__btn btn">
+            <img src="/template/img/icons/location.svg" alt="" /> Отримати
+            розташування
+          </button>
+        </a>
       </div>
     </div>
   </div>
@@ -152,4 +226,3 @@
 </footer>
 
 <script src="/template/js/slider.js"></script>
-
