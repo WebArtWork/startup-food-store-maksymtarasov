@@ -1,0 +1,46 @@
+.accordeon {
+  &__item {
+  }
+
+  &__button {
+    width: fit-content;
+  }
+
+  &__dish {
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 700;
+  }
+
+  &__dish-engl {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #828282;
+  }
+
+  &__list {
+    display: none;
+    // opacity: 0;
+    max-height: 0;
+    a {
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: 600;
+      margin: 8px 0 8px 20px;
+
+      &:hover{
+        color: #099409;
+    }
+    }
+  }
+}
+
+.accordeon__list.accordeon__list--visible {
+  // opacity: 1;
+  display: block;
+}
+
+.accordeon__dish--active {
+  color: #099409;
+}

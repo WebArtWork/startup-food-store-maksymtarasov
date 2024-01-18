@@ -38,8 +38,89 @@
 
 <main>
   <div class="container main-container">
-    <section class="menu">menu</section>
+    <section class="menu">
+      <a href="#">
+        <button class="menu__btn btn">
+          <img src="/template/img/icons/food.svg" alt="" /> В закладі
+        </button>
+      </a>
+
+      <a href="#" class="menu-popular">
+        <img src="/template/img/icons/star.svg" alt="star" />
+        <p>Популярне</p>
+      </a>
+
+      <div class="accordeon">
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">МЕНЮ КУХНІ</div>
+              <div class="accordeon__dish-engl">Kitchen Menu</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">ГАСТРОНОМІЯ</a></li>
+            <li><a href="#">ЗАКУСКИ</a></li>
+            <li><a href="#">САЛАТИ</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">СУШІ</div>
+              <div class="accordeon__dish-engl">SUSHI</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">Сашимі</a></li>
+            <li><a href="#">Maki</a></li>
+            <li><a href="#">Філадельфія</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">ПІЦА</div>
+              <div class="accordeon__dish-engl">PIZZA</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">ПІЦЦА З САЛЬСОЮ</a></li>
+            <li><a href="#">ПІЦЦА З ВЕРШКАМИ</a></li>
+            <li><a href="#">ПІЦЦА З СИРОМ</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">АЛКОГОЛЬНІ НАПОЇ</div>
+              <div class="accordeon__dish-engl">Alcohol Drinks</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">ПИВО</a></li>
+            <li><a href="#">АЛКОГОЛЬНІ КОКТЕЙЛІ</a></li>
+            <li><a href="#">ГАРЯЧІ КОКТЕЙЛІ</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">БЕЗАЛКОГОЛЬНІ НАПОЇ</div>
+              <div class="accordeon__dish-engl">Non Alcohol Drinks</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">КАВА</a></li>
+            <li><a href="#">ЧАЙ</a></li>
+            <li><a href="#">ВОДА, СОКИ</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="food">food</section>
+
     <section class="information">
       <div class="information__search">
         <form>
@@ -226,3 +307,4 @@
 </footer>
 
 <script src="/template/js/slider.js"></script>
+<script src="/template/js/accordeon.js"></script>
