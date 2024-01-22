@@ -132,7 +132,7 @@
       </div>
       <div class="food-category">
         <div class="food-category__title">ГАСТРОНОМІЯ</div>
-        <div class="food-item">
+        <div class="food-item" data-modal-id="modal1">
           <div class="food-item__left">
             <div class="food-item__title">Formaggi</div>
             <div class="food-item__price"><span>140</span> UAH</div>
@@ -546,5 +546,34 @@
   </div>
 </footer>
 
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="food-item__modal">
+      <div class="food-item__left">
+        <div class="food-item__title">Formaggi</div>
+        <div class="food-item__price"><span>140</span> UAH</div>
+        <div class="food-item__descr">Різні види сирів</div>
+        <div class="food-item__weight">
+          <div class="food-item__weight-img">
+            <img src="/template/img/icons/weight.svg" alt="weight" />
+          </div>
+          <div class="food-item__weight-number"><span>100</span>г</div>
+        </div>
+        <div class="food-item__controls">
+          <div class="food-item__controls-img">
+            <img src="/template/img/icons/heart.svg" alt="heart" />
+          </div>
+          <div class="food-item__controls-number">999</div>
+        </div>
+      </div>
+      <div class="food-item__right">
+        <img src="/template/img/menu-food/food-1.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
 <script src="/template/js/slider.js"></script>
 <script src="/template/js/accordeon.js"></script>
+<script src="/template/js/modal.js"></script>
