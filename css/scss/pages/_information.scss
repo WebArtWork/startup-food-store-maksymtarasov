@@ -1,16 +1,7 @@
-.main-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 14px;
-  margin-bottom: 20px;
-  color: #f8f8f8;
-  background-color: #111111;
-  max-width: 1280px;
-  border-radius: 0 0 20px 20px;
-  line-height: 1.5;
-}
 
 .information {
+  position: sticky;
+  top: 120px;
   // margin-left: auto;
   width: 272px;
   max-height: calc(100vh - 120px);
@@ -101,5 +92,18 @@
   &__descr {
     font-size: 14px;
     font-weight: 600;
+  }
+}
+
+
+@media (max-width: 1100px){
+  .information{
+    width: 212px;
+  }
+}
+
+@media (max-width: 840px){
+  .information{
+    display: none;
   }
 }

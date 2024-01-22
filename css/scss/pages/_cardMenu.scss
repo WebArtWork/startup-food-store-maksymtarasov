@@ -78,7 +78,7 @@
 
   &__right {
     img {
-      width: 120px;
+      min-width: 120px;
       height: 90px;
       border-radius: 6px;
     }
@@ -163,4 +163,10 @@
 
 .modal.fade-in {
   animation: fadeIn 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .food-item{
+    padding: 16px 0;
+  }
 }

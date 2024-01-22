@@ -47,4 +47,25 @@
   }
 }
 
+@media (max-width: 768px) {
+  .food {
+    padding-top: 0px;
+    margin: 0;
+  }
 
+  .food-category {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #333333;
+
+    &__title {
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      text-align: left;
+      border-radius:0;
+      background-color: #222222;
+      padding: 16px;
+    }
+  }
+}
