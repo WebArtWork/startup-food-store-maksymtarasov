@@ -4,12 +4,12 @@
   gap: 10px;
   padding: 16px;
   cursor: pointer;
-  border-top: 1px solid #333333;
+  border-top: 1px solid $dark-gray;
   line-height: 1.6;
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #222222;
+    background-color: $dark;
   }
 
   &__title {
@@ -18,7 +18,7 @@
   }
 
   &__price {
-    color: #099409;
+    color: $green;
     font-size: 16px;
     font-weight: 700;
     margin-bottom: 4px;
@@ -33,7 +33,7 @@
     display: flex;
     gap: 5px;
     font-size: 12px;
-    color: #828282;
+    color: $gray;
     margin: 8px 8px 0 0;
   }
 
@@ -41,7 +41,7 @@
     display: inline-flex;
     margin-top: 8px;
     height: 40px;
-    border: 1px solid #333333;
+    border: 1px solid $dark-gray;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
     border-radius: 6px;
     cursor: pointer;
@@ -64,8 +64,8 @@
     justify-content: center;
     align-items: center;
     font-size: 11px;
-    color: #828282;
-    background-color: #333333;
+    color: $gray;
+    background-color: $dark-gray;
     border-radius: 0 6px 6px 0;
     padding: 0 8px;
   }
@@ -102,7 +102,7 @@
 
 .modal-content {
   position: relative;
-  background-color: #111111;
+  background-color: $darker;
   color: #f8f8f8;
   padding: 0;
   border-radius: 8px;
@@ -142,7 +142,7 @@
   right: 10px;
   font-size: 30px;
   cursor: pointer;
-  background-color: #099409;
+  background-color: $green;
   border-radius: 100%;
   width: 40px;
   height: 40px;

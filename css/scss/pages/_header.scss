@@ -15,7 +15,7 @@
 }
 
 .header {
-  background-color: #111111;
+  background-color:$darker;
   padding: 25px 0;
   position: fixed;
   width: 100%;
@@ -28,7 +28,7 @@
   }
 
   &__text {
-    color: aliceblue;
+    color: $alice-blue;
   }
 
   &__title {
@@ -40,7 +40,7 @@
   &__descr {
     font-size: 12px;
     line-height: 16px;
-    color: #bdbdbd;
+    color: $light-gray2;
   }
 }
 

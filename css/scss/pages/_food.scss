@@ -11,7 +11,7 @@
 }
 
 .food-opening {
-  border: 1px solid #333333;
+  border: 1px solid $dark-gray;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -19,9 +19,9 @@
   &__img {
     display: flex;
     justify-content: center;
-    background-color: #3d2105;
+    background-color: $brown;
     padding: 8px;
-    border-right: 1px solid #333333;
+    border-right: 1px solid $dark-gray;
 
     border-radius: 8px 0 0 8px;
   }
@@ -34,7 +34,7 @@
 
 .food-category {
   margin-top: 24px;
-  border: 1px solid #333333;
+  border: 1px solid $dark-gray;
   border-radius: 11px;
   &__title {
     font-size: 24px;
@@ -42,7 +42,7 @@
     line-height: 32px;
     text-align: center;
     border-radius: 12px 12px 0 0;
-    background-color: #222222;
+    background-color: $dark;
     padding: 16px;
   }
 }
@@ -60,7 +60,7 @@
   .food-category {
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid $dark-gray;
 
     &__title {
       font-size: 24px;
@@ -68,7 +68,7 @@
       line-height: 32px;
       text-align: left;
       border-radius: 0;
-      background-color: #222222;
+      background-color: $dark;
       padding: 16px;
     }
   }

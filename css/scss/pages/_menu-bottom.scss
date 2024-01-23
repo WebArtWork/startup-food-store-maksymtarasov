@@ -8,14 +8,14 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    color: #bdbdbd;
+    color: $light-gray2;
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 8px;
 
     span {
-      background-color: #111111;
+      background-color: $darker;
       display: block;
       position: relative;
       z-index: 1;
@@ -28,7 +28,7 @@
       width: 100%;
       height: 2px;
       display: block;
-      background-color: #333333;
+      background-color: $dark-gray;
     }
   }
 
@@ -40,10 +40,10 @@
     font-size: 20px;
     font-weight: 600;
     line-height: 32px;
-    background-color: #111111;
+    background-color: $darker;
     border-radius: 8px;
     margin-bottom: 8px;
-    border: 1px solid #333333;
+    border: 1px solid $dark-gray;
     word-wrap: anywhere;
     hyphens: auto;
     white-space: normal;

@@ -2,21 +2,20 @@
 .information {
   position: sticky;
   top: 120px;
-  // margin-left: auto;
   width: 272px;
   max-height: calc(100vh - 120px);
   overflow: auto;
   padding-top: 24px;
 
   &::-webkit-scrollbar {
-    display: none; /* Для браузеров, использующих WebKit (Chrome, Safari) */
+    display: none;
   }
 
   &__search {
-    background: #111111;
+    background: $darker;
   }
   &__search form {
-    background: #111111;
+    background: $darker;
     position: relative;
   }
   &__search input,
@@ -32,7 +31,7 @@
     height: 56px;
     padding-left: 15px;
     border-radius: 6px;
-    border: 2px solid #333333;
+    border: 2px solid $dark-gray;
   }
   &__search button {
     position: absolute;
@@ -42,15 +41,15 @@
   }
 
   &__search input:focus {
-    color: #f8f8f8;
-    border: 2px solid #099409;
+    color: $light-gray;
+    border: 2px solid $green;
   }
 
   &__title {
     font-size: 14px;
     line-height: 24px;
     font-weight: 600;
-    color: #828282;
+    color: $gray;
     margin-bottom: 4px;
     margin-top: 16px;
   }
@@ -78,12 +77,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #222222;
+    background-color: $dark;
   }
 
   &__title {
     font-size: 13px;
-    color: #828282;
+    color: $gray;
     margin: 5px 0;
     line-height: 16px;
     font-weight: 700;

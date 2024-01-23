@@ -14,7 +14,7 @@
     font-size: 13px;
     line-height: 16px;
     font-weight: 400;
-    color: #828282;
+    color: $gray;
   }
 
   &__list {
@@ -28,7 +28,7 @@
       margin: 8px 0 8px 20px;
 
       &:hover{
-        color: #099409;
+        color: $green;
     }
     }
   }
@@ -40,5 +40,5 @@
 }
 
 .accordeon__dish--active {
-  color: #099409;
+  color: $green;
 }

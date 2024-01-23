@@ -1,3 +1,4 @@
+//Для моб версії
 .menu-top {
   display: none;
 
@@ -19,7 +20,7 @@
     display: none;
     position: sticky;
     top: -1px;
-    background-color: #111111;
+    background-color: $darker;
     padding: 10px 0;
     margin-bottom: -10px;
   }
@@ -31,7 +32,7 @@
 
   &__titles-link {
     text-decoration: none;
-    color: #828282;
+    color: $gray;
     position: relative;
     transition: color 0.1s ease-in-out;
     font-size: 20px;
@@ -48,12 +49,12 @@
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #099409;
+    background-color: $green;
     transition: width 0.1s ease-in-out;
   }
 
   &__titles-link.active {
-    color: #f8f8f8;
+    color: $light-gray;
   }
 
   &__titles-link.active::after {
@@ -62,10 +63,10 @@
 
   &__descr-link {
     margin-right: 4px;
-    border: 1px solid #333333;
+    border: 1px solid $dark-gray;
     border-radius: 8px;
     padding: 0 12px;
-    color: #f8f8f8;
+    color: $light-gray;
     transition: color 0.1s ease-in-out;
     font-size: 12px;
     line-height: 36px;
@@ -73,8 +74,8 @@
   }
 
   &__descr-link.active {
-    color: #099409;
-    border: 1px solid #099409;
+    color: $green;
+    border: 1px solid $green;
   }
 }
 
