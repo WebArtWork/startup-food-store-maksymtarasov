@@ -1,6 +1,7 @@
 .food-item {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
   padding: 16px;
   cursor: pointer;
   border-top: 1px solid #333333;

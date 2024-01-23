@@ -3,7 +3,6 @@ const modal = document.getElementById("modal1");
 
 foodItems.forEach((foodItem) => {
   foodItem.addEventListener("click", (event) => {
-    // Проверяем, что событие произошло не на элементе .food-item__controls
     if (!event.target.closest(".food-item__controls")) {
       modal.style.display = "flex";
       modal.classList.add("fade-in");
