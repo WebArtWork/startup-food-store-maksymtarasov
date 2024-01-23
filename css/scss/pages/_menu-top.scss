@@ -3,7 +3,6 @@
 
   &__titles {
     height: 56px;
-
   }
 
   &__titles,
@@ -16,7 +15,8 @@
     text-transform: uppercase;
   }
 
-  &__descr{
+  &__descr {
+    display: none;
     position: sticky;
     top: -1px;
     background-color: #111111;
@@ -81,5 +81,9 @@
 @media (max-width: 768px) {
   .menu-top {
     display: block;
+  }
+
+  .menu-top__descr {
+    display: inherit;
   }
 }
