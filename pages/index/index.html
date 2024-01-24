@@ -1,4 +1,3 @@
-
 <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -40,20 +39,32 @@
 <main>
   <div class="container main-container">
     <!-- Мобільне меню зверху -->
-      <div class="menu-top">
-        <div class="menu-top__titles">
-          <a href="" class="menu-top__titles-link active">МЕНЮ КУХНІ</a>
-          <a href="" class="menu-top__titles-link">СУШІ</a>
-          <a href="" class="menu-top__titles-link">ПІЦА</a>
-          <a href="" class="menu-top__titles-link">АЛКОГОЛЬНІ НАПОЇ</a>
-          <a href="" class="menu-top__titles-link">БЕЗАЛКОГОЛЬНІ НАПОЇ</a>
-        </div>
+    <div class="menu-top">
+
+      <div class="product">
+        <a href="#" class="product-popular">
+          <img src="/template/img/icons/star.svg" alt="">
+          <div>Популярне</div>
+        </a>
+        <a href="#" class="product-favorite">
+          <img src="/template/img/icons/heart.svg" alt="">
+          <div>Обрані: <span>0</span></div>
+        </a>
       </div>
-      <div class="menu-top__descr">
-        <a href="" class="menu-top__descr-link">гАСТРОНОМІЯ КУХНІ</a>
-        <a href="" class="menu-top__descr-link">ЗАКУСКИ</a>
-        <a href="" class="menu-top__descr-link">САЛАТИ</a>
+
+      <div class="menu-top__titles">
+        <a href="" class="menu-top__titles-link active">МЕНЮ КУХНІ</a>
+        <a href="" class="menu-top__titles-link">СУШІ</a>
+        <a href="" class="menu-top__titles-link">ПІЦА</a>
+        <a href="" class="menu-top__titles-link">АЛКОГОЛЬНІ НАПОЇ</a>
+        <a href="" class="menu-top__titles-link">БЕЗАЛКОГОЛЬНІ НАПОЇ</a>
       </div>
+    </div>
+    <div class="menu-top__descr">
+      <a href="" class="menu-top__descr-link">гАСТРОНОМІЯ КУХНІ</a>
+      <a href="" class="menu-top__descr-link">ЗАКУСКИ</a>
+      <a href="" class="menu-top__descr-link">САЛАТИ</a>
+    </div>
     <!-- Мобільне меню зверху -->
 
     <section class="menu">
@@ -146,7 +157,9 @@
             class="food-opening__icon"
           />
         </div>
-        <div class="food-opening__text">Ми відкриємось сьогодні о 11:00</div>
+        <div class="food-opening__text">
+          Ми відкриємось сьогодні о <span>{{{openHours}}}</span>
+        </div>
       </div>
       <div class="food-category">
         <div class="food-category__title">ГАСТРОНОМІЯ</div>
@@ -1321,7 +1334,7 @@
           </div>
           <div class="information-item__text">
             <div class="information-item__title">WiFi</div>
-            <div class="information-item__descr">12345678</div>
+            <div class="information-item__descr">{{{info.WIFIpassword}}}</div>
           </div>
         </div>
         <div class="information-item">
@@ -1330,7 +1343,7 @@
           </div>
           <div class="information-item__text">
             <div class="information-item__title">Робочий час:</div>
-            <div class="information-item__descr">11:00 - 22:00</div>
+            <div class="information-item__descr">{{{info.workingHours}}}</div>
           </div>
         </div>
         <div class="information-item">
@@ -1340,8 +1353,7 @@
           <div class="information-item__text">
             <div class="information-item__title">Адреса:</div>
             <div class="information-item__descr">
-              Ploshcha Polʹsʹkyy Rynok, 5C, Kamianets'-podil's'kyi,
-              Khmel'nyts'ka oblast, Ukraine, 00000
+              {{{info.address}}}
             </div>
           </div>
         </div>
@@ -1351,7 +1363,7 @@
           </div>
           <div class="information-item__text">
             <div class="information-item__title">Телефон:</div>
-            <div class="information-item__descr">+380686080000</div>
+            <div class="information-item__descr">{{{info.phone}}}</div>
           </div>
         </div>
       </div>
@@ -1428,13 +1440,12 @@
           <div class="footer__title">Контактні дані</div>
           <ul>
             <li>
-              Ploshcha Polʹsʹkyy Rynok, 4Г, Kamianets'-podil's'kyi,
-              Khmel'nyts'ka oblast, Ukraine, 32303
+              {{{info.address}}}
             </li>
-            <li>+380686089999</li>
+            <li>{{{info.phone}}}</li>
             <li>
-              <a class="link-bold" href="daniel.big.family@gmail.com">
-                daniel.big.family@gmail.com</a
+              <a class="link-bold" href="{{{info.email}}}">
+                {{{info.email}}}</a
               >
             </li>
           </ul>
