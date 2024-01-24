@@ -1,0 +1,116 @@
+//Для моб версії
+.menu-top {
+  display: none;
+
+  &__titles {
+    height: 56px;
+  }
+
+  &__titles,
+  &__descr {
+    white-space: nowrap;
+    overflow-x: auto;
+    display: flex;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    text-transform: uppercase;
+  }
+
+  &__descr {
+    display: none;
+    position: sticky;
+    top: -1px;
+    background-color: $darker;
+    padding: 10px 0;
+    margin-bottom: -10px;
+  }
+
+  &__titles::-webkit-scrollbar,
+  &__descr::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__titles-link {
+    text-decoration: none;
+    color: $gray;
+    position: relative;
+    transition: color 0.1s ease-in-out;
+    font-size: 20px;
+    line-height: 56px;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+
+  &__titles-link::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: $green;
+    transition: width 0.1s ease-in-out;
+  }
+
+  &__titles-link.active {
+    color: $light-gray;
+  }
+
+  &__titles-link.active::after {
+    width: 100%;
+  }
+
+  &__descr-link {
+    margin-right: 4px;
+    border: 1px solid $dark-gray;
+    border-radius: 8px;
+    padding: 0 12px;
+    color: $light-gray;
+    transition: color 0.1s ease-in-out;
+    font-size: 12px;
+    line-height: 36px;
+    font-weight: 600;
+  }
+
+  &__descr-link.active {
+    color: $green;
+    border: 1px solid $green;
+  }
+}
+
+.product{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid $dark-gray;
+  border-top: 2px solid $dark-gray;
+  margin: 0 -14px;
+
+  &-popular,
+  &-favorite{
+    display: flex;
+    flex-basis: 50%;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 12px;
+  }
+
+  &-popular{
+    border-right: 1px solid $dark-gray;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-top {
+    display: block;
+  }
+
+  .menu-top__descr {
+    display: inherit;
+  }
+}

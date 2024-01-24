@@ -1,36 +1,49 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>{{{title}}}</title>
-	<meta itemprop="name" content="{{{title}}}">
-	<meta name="twitter:title" content="{{{title}}}">
-	<meta property="og:title" content="{{{title}}}" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{{title}}}</title>
+    <meta itemprop="name" content="{{{title}}}" />
+    <meta name="twitter:title" content="{{{title}}}" />
+    <meta property="og:title" content="{{{title}}}" />
 
-	<meta name="description" content="{{{description}}}">
-	<meta itemprop="description" content="{{{description}}}">
-	<meta name="twitter:description" content="{{{description}}}">
-	<meta property="og:description" content="{{{description}}}" />
+    <meta name="description" content="{{{description}}}" />
+    <meta itemprop="description" content="{{{description}}}" />
+    <meta name="twitter:description" content="{{{description}}}" />
+    <meta property="og:description" content="{{{description}}}" />
 
-	<meta itemprop="image" content="{{{image}}}">
-	<meta name="twitter:image:src" content="{{{image}}}">
-	<meta property="og:image" content="{{{image}}}" />
+    <meta itemprop="image" content="{{{image}}}" />
+    <meta name="twitter:image:src" content="{{{image}}}" />
+    <meta property="og:image" content="{{{image}}}" />
 
-	<meta name="keywords" content="{{{keywords}}}">
-	<base href="/">
-	<link rel="icon" type="image/x-icon" href="/template/img/favicon.ico">
-	<link rel="stylesheet" href="/template/css/index.css">
-	<style>
-	/* <!-- CSS --> */
-	</style>
-</head>
-<body>
+    <meta name="keywords" content="{{{keywords}}}" />
+    <base href="/" />
+    <link rel="icon" type="image/x-icon" href="/template/img/favicon.ico" />
+    <link rel="stylesheet" href="/template/css/index.css" />
 
-	<!-- HTML -->
-	<script src="/template/js/index.js"></script>
-	<script>
-	// <!-- JS -->
-	</script>
-</body>
+    <style>
+      :root {
+      	--white: {{{variables.white || "#ffffff"}}};
+      	--alice-blue: {{{variables.alice-blue || "#f0f8ff"}}};
+      	--light-gray: {{{variables.light-gray || "#f8f8f8"}}};
+      	--light-gray2: {{{variables.light-gray2 || "#bdbdbd"}}};
+      	--gray: {{{variables.gray || "#828282"}}};
+      	--dark-gray: {{{variables.dark-gray || "#333333"}}};
+      	--dark: {{{variables.dark || "#222222"}}};
+      	--darker: {{{variables.darker || "#111111"}}};
+      	--dark-green: {{{variables.dark-green || "#0c4314"}}};
+      	--green: {{{variables.green || "#099409"}}};
+      	--brown: {{{variables.brown || "#3d2105"}}};
+      	--dark-green2: {{{variables.dark-green2 || "#115e1d"}}};
+      }
+    </style>
+  </head>
+  <body>
+    <!-- HTML -->
+    <script src="/template/js/index.js"></script>
+    <script>
+      // <!-- JS -->
+    </script>
+  </body>
 </html>

@@ -1,12 +1,1584 @@
-{% for product in top_products %}
-	<h1>{{{product.name}}}</h1>
-	<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
-{% endfor %}
-{% for product in products %}
-	<h1>{{{product.name}}}</h1>
-	<img src="{{{product.thumb}}}" alt="{{{product.name}}}">
-{% endfor %}
-{% for article in articles %}
-	<h1>{{{article.name}}}</h1>
-	<img src="{{{article.thumb}}}" alt="{{{article.name}}}">
-{% endfor %}
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="" class="logo">
+      <img class="logo__img" src="/template/img/logo/logo.jpg" alt="logo" />
+    </a>
+    <div class="header__text">
+      <div class="header__title">Pizzeria "Dom"</div>
+      <div class="header__descr">Ресторан</div>
+    </div>
+  </div>
+</header>
+
+<section class="swiper-section">
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/template/img/slider/slide-foto-1.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/template/img/slider/slide-foto-2.jpg" alt="" />
+      </div>
+      <div class="swiper-slide">
+        <img src="/template/img/slider/slide-foto-3.jpg" alt="" />
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<main>
+  <div class="container main-container">
+    <!-- Мобільне меню зверху -->
+    <div class="menu-top">
+
+      <div class="product">
+        <a href="#" class="product-popular">
+          <img src="/template/img/icons/star.svg" alt="">
+          <div>Популярне</div>
+        </a>
+        <a href="#" class="product-favorite">
+          <img src="/template/img/icons/heart.svg" alt="">
+          <div>Обрані: <span>0</span></div>
+        </a>
+      </div>
+
+      <div class="menu-top__titles">
+        <a href="" class="menu-top__titles-link active">МЕНЮ КУХНІ</a>
+        <a href="" class="menu-top__titles-link">СУШІ</a>
+        <a href="" class="menu-top__titles-link">ПІЦА</a>
+        <a href="" class="menu-top__titles-link">АЛКОГОЛЬНІ НАПОЇ</a>
+        <a href="" class="menu-top__titles-link">БЕЗАЛКОГОЛЬНІ НАПОЇ</a>
+      </div>
+    </div>
+    <div class="menu-top__descr">
+      <a href="" class="menu-top__descr-link">гАСТРОНОМІЯ КУХНІ</a>
+      <a href="" class="menu-top__descr-link">ЗАКУСКИ</a>
+      <a href="" class="menu-top__descr-link">САЛАТИ</a>
+    </div>
+    <!-- Мобільне меню зверху -->
+
+    <section class="menu">
+      <a href="#">
+        <button class="menu__btn btn">
+          <img src="/template/img/icons/food.svg" alt="" /> В закладі
+        </button>
+      </a>
+
+      <a href="#" class="menu-popular">
+        <img src="/template/img/icons/star.svg" alt="star" />
+        <p>Популярне</p>
+      </a>
+
+      <div class="accordeon">
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">МЕНЮ КУХНІ</div>
+              <div class="accordeon__dish-engl">Kitchen Menu</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">ГАСТРОНОМІЯ</a></li>
+            <li><a href="#">ЗАКУСКИ</a></li>
+            <li><a href="#">САЛАТИ</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">СУШІ</div>
+              <div class="accordeon__dish-engl">SUSHI</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">Сашимі</a></li>
+            <li><a href="#">Maki</a></li>
+            <li><a href="#">Філадельфія</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">ПІЦА</div>
+              <div class="accordeon__dish-engl">PIZZA</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">ПІЦЦА З САЛЬСОЮ</a></li>
+            <li><a href="#">ПІЦЦА З ВЕРШКАМИ</a></li>
+            <li><a href="#">ПІЦЦА З СИРОМ</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">АЛКОГОЛЬНІ НАПОЇ</div>
+              <div class="accordeon__dish-engl">Alcohol Drinks</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">ПИВО</a></li>
+            <li><a href="#">АЛКОГОЛЬНІ КОКТЕЙЛІ</a></li>
+            <li><a href="#">ГАРЯЧІ КОКТЕЙЛІ</a></li>
+          </ul>
+        </div>
+        <div class="accordeon__item">
+          <div class="accordeon__button">
+            <a href="#">
+              <div class="accordeon__dish">БЕЗАЛКОГОЛЬНІ НАПОЇ</div>
+              <div class="accordeon__dish-engl">Non Alcohol Drinks</div>
+            </a>
+          </div>
+          <ul class="accordeon__list">
+            <li><a href="#">КАВА</a></li>
+            <li><a href="#">ЧАЙ</a></li>
+            <li><a href="#">ВОДА, СОКИ</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="food">
+      <div class="food-opening">
+        <div class="food-opening__img">
+          <img
+            src="/template/img/icons/exclamation-point.svg"
+            alt="point"
+            class="food-opening__icon"
+          />
+        </div>
+        <div class="food-opening__text">
+          Ми відкриємось сьогодні о <span>{{{openHours}}}</span>
+        </div>
+      </div>
+      <div class="food-category">
+        <div class="food-category__title">ГАСТРОНОМІЯ</div>
+        <div class="food-item" data-modal-id="modal1">
+          <div class="food-item__left">
+            <div class="food-item__title">Formaggi</div>
+            <div class="food-item__price"><span>140</span> UAH</div>
+            <div class="food-item__descr">Різні види сирів</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Salumi</div>
+            <div class="food-item__price"><span>175</span> UAH</div>
+            <div class="food-item__descr">Сиро-в'ялені м'ясні вироби</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Olive</div>
+            <div class="food-item__price"><span>90</span> UAH</div>
+            <div class="food-item__descr">Оливки</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">ЗАКУСКИ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Bruschette</div>
+            <div class="food-item__price"><span>105</span> UAH</div>
+            <div class="food-item__descr">Брускетте (3 шт)</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Carpaccio di vitello</div>
+            <div class="food-item__price"><span>195</span> UAH</div>
+            <div class="food-item__descr">
+              Карпаччо ді вітелло (тонкі слайси промаринованої сирої яловичини.
+              Пармезан, каперси, рукола, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Carpaccio di salmone</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Карпаччо ді сальмоне (тонкі слайси промаринованого лосося,
+              пармезан, каперси, рукола, лимон, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">САЛАТИ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Tagliata</div>
+            <div class="food-item__price"><span>200</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Posa-posa</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Caprese</div>
+            <div class="food-item__price"><span>190</span> UAH</div>
+            <div class="food-item__descr">
+              Капрезе (моцарела, помодоріні, рукола, соус песто, пармезан)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- СУШІ -->
+      <div class="food-category">
+        <div class="food-category__title">Сашимі</div>
+        <div class="food-item" data-modal-id="modal1">
+          <div class="food-item__left">
+            <div class="food-item__title">Prawns</div>
+            <div class="food-item__price"><span>145</span> UAH</div>
+            <div class="food-item__descr">Креветки</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>50</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Salmon</div>
+            <div class="food-item__price"><span>135</span> UAH</div>
+            <div class="food-item__descr">Креветки</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>50</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Eel</div>
+            <div class="food-item__price"><span>150</span> UAH</div>
+            <div class="food-item__descr">Вугор</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>50</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">Maki</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Maki cucumber – avocado</div>
+            <div class="food-item__price"><span>90</span> UAH</div>
+            <div class="food-item__descr">
+              Maki огірок – авокадо (огірок, авокадо, рис, норі)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>125</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Maki shrimp</div>
+            <div class="food-item__price"><span>125</span> UAH</div>
+            <div class="food-item__descr">
+              Maki – креветка (креветка, рис, норі)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>110</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Maki eel</div>
+            <div class="food-item__price"><span>165</span> UAH</div>
+            <div class="food-item__descr">
+              Maki – вугор (вугор, рис, норі, соус, уногі, кунжут)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>145</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">Філадельфія</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Philadelphia with cucumber</div>
+            <div class="food-item__price"><span>210</span> UAH</div>
+            <div class="food-item__descr">
+              Філадельфія з огірком (рис, норі, лосось с/ с, крем-сир, огірок)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>200</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Philadelphia with avocado</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Філадельфія з авокадо (рис, норі, лосось с/ с, крем-сир, авокадо)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>210</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ПІЦА -->
+      <div class="food-category">
+        <div class="food-category__title">ПІЦЦА З САЛЬСОЮ</div>
+        <div class="food-item" data-modal-id="modal1">
+          <div class="food-item__left">
+            <div class="food-item__title">Margherita</div>
+            <div class="food-item__price"><span>140</span> UAH</div>
+            <div class="food-item__descr">
+              170.00грн/ 40 см Маргеріта (моцарела, базилік, оливкова олія)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Fantasia</div>
+            <div class="food-item__price"><span>175</span> UAH</div>
+            <div class="food-item__descr">
+              205.00грн/ 40 см Фантазія (моцарела, сосиски, картопля фрі)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Diavola</div>
+            <div class="food-item__price"><span>90</span> UAH</div>
+            <div class="food-item__descr">
+              205.00грн/ 40 см Д’явола (моцарела, паприка. салямі, базилік,
+              оливкова олія)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">ПІЦЦА З ВЕРШКАМИ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Quattro formaggi</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              255.00грн/ 40 см Куатро формаджі (чотири види італійського сиру,
+              базилік, оливкова олія)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Daniel</div>
+            <div class="food-item__price"><span>195</span> UAH</div>
+            <div class="food-item__descr">
+              255.00грн/ 40 см Куатро формаджі (чотири види італійського сиру,
+              базилік, оливкова олія)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Tonno cipolla</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              245.00грн/ 40 см Тонно чіпола (тунець, цибуля, моцарелла, оливкова
+              олія)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">ПІЦА З СИРОМ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Quattro formaggi</div>
+            <div class="food-item__price"><span>200</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Daniel</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Tonno cipolla</div>
+            <div class="food-item__price"><span>190</span> UAH</div>
+            <div class="food-item__descr">
+              Капрезе (моцарела, помодоріні, рукола, соус песто, пармезан)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- АЛКОГОЛЬНІ НАПОЇ -->
+      <div class="food-category">
+        <div class="food-category__title">ПИВО</div>
+        <div class="food-item" data-modal-id="modal1">
+          <div class="food-item__left">
+            <div class="food-item__title">Hoegarden</div>
+            <div class="food-item__price"><span>89</span> UAH</div>
+            <div class="food-item__descr">
+              Біле натуральне нефільтроване пиво верхнього бродіння, зварене по
+              традиційному рецепту з несолодової пшениці, спеціальних дріжджів і
+              особливих інгредієнтів.
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>0.5</span>л</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Leff Brune</div>
+            <div class="food-item__price"><span>87</span> UAH</div>
+            <div class="food-item__descr">
+              Смак пива повний, вершковий, злегка солодкий, з тонами смаженого
+              солоду, ідеальним балансом між легкою гіркотою і карамелевими
+              відтінками.
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>0.5</span>л</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Leff Brune</div>
+            <div class="food-item__price"><span>87</span> UAH</div>
+            <div class="food-item__descr">
+              Смак пива повний, вершковий, злегка солодкий, з тонами смаженого
+              солоду, ідеальним балансом між легкою гіркотою і карамелевими
+              відтінками.
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>0.5</span>л</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">АЛКОГОЛЬНІ КОКТЕЙЛІ</div>
+        <div class="food-item" data-modal-id="modal1">
+          <div class="food-item__left">
+            <div class="food-item__title">Hoegarden</div>
+            <div class="food-item__price"><span>89</span> UAH</div>
+            <div class="food-item__descr">
+              Біле натуральне нефільтроване пиво верхнього бродіння, зварене по
+              традиційному рецепту з несолодової пшениці, спеціальних дріжджів і
+              особливих інгредієнтів.
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>0.5</span>л</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Leff Brune</div>
+            <div class="food-item__price"><span>87</span> UAH</div>
+            <div class="food-item__descr">
+              Смак пива повний, вершковий, злегка солодкий, з тонами смаженого
+              солоду, ідеальним балансом між легкою гіркотою і карамелевими
+              відтінками.
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>0.5</span>л</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Leff Brune</div>
+            <div class="food-item__price"><span>87</span> UAH</div>
+            <div class="food-item__descr">
+              Смак пива повний, вершковий, злегка солодкий, з тонами смаженого
+              солоду, ідеальним балансом між легкою гіркотою і карамелевими
+              відтінками.
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>0.5</span>л</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">ГОРЯЧІ КОКТЕЙЛІ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Tagliata</div>
+            <div class="food-item__price"><span>200</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Posa-posa</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Caprese</div>
+            <div class="food-item__price"><span>190</span> UAH</div>
+            <div class="food-item__descr">
+              Капрезе (моцарела, помодоріні, рукола, соус песто, пармезан)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- БЕЗАЛКОГОЛЬНІ НАПОЇ -->
+      <div class="food-category">
+        <div class="food-category__title">КАВА</div>
+        <div class="food-item" data-modal-id="modal1">
+          <div class="food-item__left">
+            <div class="food-item__title">Formaggi</div>
+            <div class="food-item__price"><span>140</span> UAH</div>
+            <div class="food-item__descr">Різні види сирів</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Salumi</div>
+            <div class="food-item__price"><span>175</span> UAH</div>
+            <div class="food-item__descr">Сиро-в'ялені м'ясні вироби</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Olive</div>
+            <div class="food-item__price"><span>90</span> UAH</div>
+            <div class="food-item__descr">Оливки</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">ЧАЙ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Bruschette</div>
+            <div class="food-item__price"><span>105</span> UAH</div>
+            <div class="food-item__descr">Брускетте (3 шт)</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Carpaccio di vitello</div>
+            <div class="food-item__price"><span>195</span> UAH</div>
+            <div class="food-item__descr">
+              Карпаччо ді вітелло (тонкі слайси промаринованої сирої яловичини.
+              Пармезан, каперси, рукола, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Carpaccio di salmone</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Карпаччо ді сальмоне (тонкі слайси промаринованого лосося,
+              пармезан, каперси, рукола, лимон, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <div class="food-category">
+        <div class="food-category__title">СОКИ</div>
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Tagliata</div>
+            <div class="food-item__price"><span>200</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-1.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Posa-posa</div>
+            <div class="food-item__price"><span>205</span> UAH</div>
+            <div class="food-item__descr">
+              Tальята (телятина обсмажена на сковороді з помодоріні, мікс
+              салатів, сир пармезан, грецькі горіхи, соус)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-2.jpg" alt="" />
+          </div>
+        </div>
+
+        <div class="food-item">
+          <div class="food-item__left">
+            <div class="food-item__title">Caprese</div>
+            <div class="food-item__price"><span>190</span> UAH</div>
+            <div class="food-item__descr">
+              Капрезе (моцарела, помодоріні, рукола, соус песто, пармезан)
+            </div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number"><span>100</span>г</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
+          </div>
+          <div class="food-item__right">
+            <img src="/template/img/menu-food/food-3.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="information">
+      <div class="information__search">
+        <form>
+          <input type="text" placeholder="Назва страви" />
+          <button type="submit">
+            <img src="/template/img/icons/search.svg" alt="search" />
+          </button>
+        </form>
+      </div>
+      <div class="informaton__data">
+        <div class="information__title">Інформація про заклад</div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/wifi.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">WiFi</div>
+            <div class="information-item__descr">{{{info.WIFIpassword}}}</div>
+          </div>
+        </div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/watch.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">Робочий час:</div>
+            <div class="information-item__descr">{{{info.workingHours}}}</div>
+          </div>
+        </div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/home.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">Адреса:</div>
+            <div class="information-item__descr">
+              {{{info.address}}}
+            </div>
+          </div>
+        </div>
+        <div class="information-item">
+          <div class="information-item__icon">
+            <img src="/template/img/icons/phone.svg" alt="wifi" />
+          </div>
+          <div class="information-item__text">
+            <div class="information-item__title">Телефон:</div>
+            <div class="information-item__descr">{{{info.phone}}}</div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#">
+        <button class="information__btn btn">
+          <img src="/template/img/icons/message.svg" alt="" /> Надіслати відгук
+        </button>
+      </a>
+
+      <div class="information__descr">
+        Винний погріб, дегустація вина, 🍕неаполітанська піца на дровах
+        🍝італійська паста 🥩🍤м‘ясо та риба на грилі чи з печі, авторські суші.
+      </div>
+    </section>
+
+    <!-- Мобільне меню знизу -->
+
+    <div class="menu-bottom">
+      <a href="#top" class="btn scroll-top">
+        <img src="/template/img/icons/arrow-up.svg" alt="up" />
+        <div>На початок</div>
+      </a>
+      <div class="menu-bottom__descr">
+        <span>ІНШІ СЕКЦІЇ:</span>
+      </div>
+
+      <div class="menu-bottom__item">
+        <a href="#">
+          <div class="accordeon__dish">МЕНЮ КУХНІ</div>
+          <div class="accordeon__dish-engl">Kitchen Menu</div>
+        </a>
+        <img src="/template/img/icons/arrow-right.svg" alt="" />
+      </div>
+      <div class="menu-bottom__item">
+        <a href="#">
+          <div class="accordeon__dish">СУШІ</div>
+          <div class="accordeon__dish-engl">SUSHI</div>
+        </a>
+        <img src="/template/img/icons/arrow-right.svg" alt="" />
+      </div>
+      <div class="menu-bottom__item">
+        <a href="#">
+          <div class="accordeon__dish">ПІЦА</div>
+          <div class="accordeon__dish-engl">PIZZA</div>
+        </a>
+        <img src="/template/img/icons/arrow-right.svg" alt="" />
+      </div>
+      <div class="menu-bottom__item">
+        <a href="#">
+          <div class="accordeon__dish">АЛКОГОЛЬНІ НАПОЇ</div>
+          <div class="accordeon__dish-engl">Alcohol Drinks</div>
+        </a>
+        <img src="/template/img/icons/arrow-right.svg" alt="" />
+      </div>
+      <div class="menu-bottom__item">
+        <a href="#">
+          <div class="accordeon__dish">БЕЗАЛКОГОЛЬНІ НАПОЇ</div>
+          <div class="accordeon__dish-engl">Non Alcohol Drinks</div>
+        </a>
+        <img src="/template/img/icons/arrow-right.svg" alt="" />
+      </div>
+    </div>
+
+    <!-- Мобільне меню знизу -->
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__top">
+      <div class="footer-info">
+        <div class="footer-info__contacts">
+          <div class="footer__title">Контактні дані</div>
+          <ul>
+            <li>
+              {{{info.address}}}
+            </li>
+            <li>{{{info.phone}}}</li>
+            <li>
+              <a class="link-bold" href="{{{info.email}}}">
+                {{{info.email}}}</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-info__time">
+          <div class="footer__title">Робочий час</div>
+          <ul>
+            <li>
+              <p>Понеділок</p>
+              <p>11:00 - 22:00</p>
+            </li>
+            <li>
+              <p>Вівторок</p>
+              <p>11:00 - 22:00</p>
+            </li>
+            <li>
+              <p>Середа</p>
+              <p>11:00 - 22:00</p>
+            </li>
+            <li>
+              <p>Четвер</p>
+              <p>11:00 - 22:00</p>
+            </li>
+            <li>
+              <p>П’ятниця</p>
+              <p>11:00 - 22:00</p>
+            </li>
+            <li>
+              <p>Субота</p>
+              <p>11:00 - 22:00</p>
+            </li>
+            <li>
+              <p>Неділя</p>
+              <p>11:00 - 22:00</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <div class="footer__title">Ми в соцмережах</div>
+        <ul>
+          <li>
+            <a href="#"
+              ><img
+                class="footer-social__icon"
+                src="/template/img/icons/instagram.svg"
+                alt="soc"
+              />
+              <p>Instagram</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="footer-social__icon"
+                src="/template/img/icons/tiktok.svg"
+                alt="soc"
+              />
+              <p>TikTok</p></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><img
+                class="footer-social__icon"
+                src="/template/img/icons/google.svg"
+                alt="soc"
+              />
+              <p>Google</p></a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer-map">
+        <div class="footer__title">На карті</div>
+        <div class="footer-map__place"></div>
+        <a href="#">
+          <button class="footer-map__btn btn">
+            <img src="/template/img/icons/location.svg" alt="" /> Отримати
+            розташування
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__line"></div>
+
+  <div class="container footer__inner">
+    <div class="footer-copyright">
+      <div class="footer-copyright__copy">&copy; 2024 Pizzeria "Dom"</div>
+      <div class="footer-copyright__list">
+        <a href="#" class="footer-copyright__item"
+          >Політика використання файлів cookie</a
+        >
+        <a href="#" class="footer-copyright__item">Умови користування</a>
+        <a href="#" class="footer-copyright__item">Політика конфіденційності</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <div class="food-item__modal">
+      <div class="food-item__left">
+        <div class="food-item__title">Formaggi</div>
+        <div class="food-item__price"><span>140</span> UAH</div>
+        <div class="food-item__descr">Різні види сирів</div>
+        <div class="food-item__weight">
+          <div class="food-item__weight-img">
+            <img src="/template/img/icons/weight.svg" alt="weight" />
+          </div>
+          <div class="food-item__weight-number"><span>100</span>г</div>
+        </div>
+        <div class="food-item__controls">
+          <div class="food-item__controls-img">
+            <img src="/template/img/icons/heart.svg" alt="heart" />
+          </div>
+          <div class="food-item__controls-number">999</div>
+        </div>
+      </div>
+      <div class="food-item__right">
+        <img src="/template/img/menu-food/food-1.jpg" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/template/js/slider.js"></script>
+<script src="/template/js/accordeon.js"></script>
+<script src="/template/js/modal.js"></script>
+<script src="/template/js/menu-top.js"></script>

@@ -1,7 +1,16 @@
 {
+	"openHours": "11:00",
 	"title": "Cool Title",
 	"store": {
 		"telegram": "https://t.me/wawceo"
+	},
+
+	"info":{
+          "WIFIpassword": "12345678",
+		  "workingHours": "11:00 - 22:00",
+		  "address": "Ploshcha Polʹsʹkyy Rynok, 5C, Kamianets'-podil's'kyi, Khmel'nyts'ka oblast, Ukraine, 00000",
+		  "phone": "+380686080000",
+		  "email": "dom.big.family@gmail.com"
 	},
 	"top_products": [
 		{
