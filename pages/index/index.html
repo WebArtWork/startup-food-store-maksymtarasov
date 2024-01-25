@@ -1,9 +1,3 @@
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 <header class="header">
   <div class="container header__inner">
@@ -115,7 +109,7 @@
       <div class="food-category">
         <div class="food-category__title">{{{tag.name}}}</div>
         {% for product in tag.products %}
-        <div class="food-item" data-modal-id="modal1">
+        <div class="food-item" data-modal-id="modal{{{ product.id }}}">
           <div class="food-item__left">
             <div class="food-item__title">{{{product.name}}}</div>
             <div class="food-item__price">
@@ -221,41 +215,15 @@
         <span>ІНШІ СЕКЦІЇ:</span>
       </div>
 
+      {% for item in sidebar %}
       <div class="menu-bottom__item">
         <a href="#">
-          <div class="accordeon__dish">МЕНЮ КУХНІ</div>
-          <div class="accordeon__dish-engl">Kitchen Menu</div>
+          <div class="accordeon__dish">{{{item.name}}}</div>
+          <div class="accordeon__dish-engl">{{{item.nameEngl}}}</div>
         </a>
         <img src="/template/img/icons/arrow-right.svg" alt="" />
       </div>
-      <div class="menu-bottom__item">
-        <a href="#">
-          <div class="accordeon__dish">СУШІ</div>
-          <div class="accordeon__dish-engl">SUSHI</div>
-        </a>
-        <img src="/template/img/icons/arrow-right.svg" alt="" />
-      </div>
-      <div class="menu-bottom__item">
-        <a href="#">
-          <div class="accordeon__dish">ПІЦА</div>
-          <div class="accordeon__dish-engl">PIZZA</div>
-        </a>
-        <img src="/template/img/icons/arrow-right.svg" alt="" />
-      </div>
-      <div class="menu-bottom__item">
-        <a href="#">
-          <div class="accordeon__dish">АЛКОГОЛЬНІ НАПОЇ</div>
-          <div class="accordeon__dish-engl">Alcohol Drinks</div>
-        </a>
-        <img src="/template/img/icons/arrow-right.svg" alt="" />
-      </div>
-      <div class="menu-bottom__item">
-        <a href="#">
-          <div class="accordeon__dish">БЕЗАЛКОГОЛЬНІ НАПОЇ</div>
-          <div class="accordeon__dish-engl">Non Alcohol Drinks</div>
-        </a>
-        <img src="/template/img/icons/arrow-right.svg" alt="" />
-      </div>
+      {% endfor %}
     </div>
     <!-- Мобільне меню знизу -->
 
@@ -378,35 +346,37 @@
   </div>
 </footer>
 
-<div id="modal1" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="food-item__modal">
-      <div class="food-item__left">
-        <div class="food-item__title">Formaggi</div>
-        <div class="food-item__price"><span>140</span> UAH</div>
-        <div class="food-item__descr">Різні види сирів</div>
-        <div class="food-item__weight">
-          <div class="food-item__weight-img">
-            <img src="/template/img/icons/weight.svg" alt="weight" />
+{% for tag in tags %}
+  {% for product in tag.products %}
+  <div id="modal{{{ product.id }}}" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="food-item__modal">
+          <div class="food-item__left">
+            <div class="food-item__title">{{{ product.name }}}</div>
+            <div class="food-item__price">
+              <span>{{{ product.price }}}</span> UAH
+            </div>
+            <div class="food-item__descr">{{{ product.short }}}</div>
+            <div class="food-item__weight">
+              <div class="food-item__weight-img">
+                <img src="/template/img/icons/weight.svg" alt="weight" />
+              </div>
+              <div class="food-item__weight-number">{{{ product.weight }}}</div>
+            </div>
+            <div class="food-item__controls">
+              <div class="food-item__controls-img">
+                <img src="/template/img/icons/heart.svg" alt="heart" />
+              </div>
+              <div class="food-item__controls-number">999</div>
+            </div>
           </div>
-          <div class="food-item__weight-number"><span>100</span>г</div>
-        </div>
-        <div class="food-item__controls">
-          <div class="food-item__controls-img">
-            <img src="/template/img/icons/heart.svg" alt="heart" />
+          <div class="food-item__right">
+            <img src="{{{ product.thumb }}}" alt="" />
           </div>
-          <div class="food-item__controls-number">999</div>
         </div>
-      </div>
-      <div class="food-item__right">
-        <img src="/template/img/menu-food/food-1.jpg" alt="" />
       </div>
     </div>
-  </div>
-</div>
+  {% endfor %}
+{% endfor %}
 
-<script src="/template/js/slider.js"></script>
-<script src="/template/js/accordeon.js"></script>
-<script src="/template/js/modal.js"></script>
-<script src="/template/js/menu-top.js"></script>
