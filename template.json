@@ -1,22 +1,27 @@
 {
-	"openHours": "11:00",
-
 	"title": "Welcome to waw Template",
 	"description": "description",
 	"keywords": "keywords",
-	"prefix": "/template",
+	"prefix": "/maksymtarasovdark",
 	"picture": "picture",
 	"author": "author",
 	"moderators": [],
 	"scss": "scss/index.scss",
 	"variables": {
-		"land_video": "/template/img/lands.MP4",
-		"land_image": "/template/img/2.webp",
+		"land_video": "/maksymtarasovdark/img/lands.MP4",
+		"land_image": "/maksymtarasovdark/img/2.webp",
 		"primary_color": "#d3c9b7",
 		"secondary_color": "#f2f1ed",
 		"primary_text_color": "#000000",
 		"primary_radius": "0",
 		"secondar_radius": "0",
+
+		"WIFIpassword": "12345678",
+		  "workingHours": "11:00 - 22:00",
+		  "address": "Ploshcha Polʹsʹkyy Rynok, 5C, Kamianets'-podil's'kyi, Khmel'nyts'ka oblast, Ukraine, 00000",
+		  "phone": "+380686080000",
+		  "email": "dom.big.family@gmail.com",
+		  "openHours": "11:00",
 
 		"white": "#ffffff",
 		"alice-blue": "#f0f8ff",
@@ -41,21 +46,21 @@
 				"id": "/product",
 				"price": 1200,
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "product"
 			},
 			{
 				"id": "/product",
 				"price": 1200,
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "product"
 			},
 			{
 				"id": "/product",
 				"price": 1200,
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "product"
 			}
 		],
@@ -64,21 +69,21 @@
 				"id": "/product",
 				"price": 1200,
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "product"
 			},
 			{
 				"id": "/product",
 				"price": 1200,
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "product"
 			},
 			{
 				"id": "/product",
 				"price": 1200,
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "product"
 			}
 		],
@@ -86,19 +91,19 @@
 			{
 				"id": "/article",
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "article"
 			},
 			{
 				"id": "/article",
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "article"
 			},
 			{
 				"id": "/article",
 				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
-				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"thumb": "https://neryxomka.com/maksymtarasovdark/img/welcome.png",
 				"name": "article"
 			}
 		],
