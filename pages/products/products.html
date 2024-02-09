@@ -107,7 +107,7 @@
       </div>
       {% for tag in tags %}
       <div class="food-category">
-        <div class="food-category__title">{{{tag.name}}}</div>
+        <div id="{{{tag._id|string}}}" class="food-category__title">{{{tag.name}}}</div>
         {% for product in tag.products %}
         <div class="food-item" data-modal-id="modal{{{ product.id }}}">
           <div class="food-item__left">
