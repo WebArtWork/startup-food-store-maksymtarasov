@@ -2,7 +2,7 @@
 <header class="header">
   <div class="container header__inner">
     <a href="" class="logo">
-      <img class="logo__img" src="/maksymtarasovdark/img/logo/logo.jpg" alt="logo" />
+      <img class="logo__img" src="{{{store.thumb}}}" alt="logo" />
     </a>
     <div class="header__text">
       <div class="header__title">{{{variables.storeName}}}</div>
@@ -11,6 +11,7 @@
   </div>
 </header>
 
+{% if variables.swiper_img_1 %}
 <section class="swiper-section">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -29,7 +30,7 @@
     <div class="swiper-pagination"></div>
   </div>
 </section>
-
+{% endif %}
 <main>
   <div class="container main-container">
 
@@ -74,18 +75,17 @@
       </a> -->
 
       <div class="accordeon">
-        {% for item in sidebar %}
+        {% for tag in tags %}
         <div class="accordeon__item">
           <div class="accordeon__button">
-            <a href="#">
-              <div class="accordeon__dish">{{{item.name}}}</div>
-              <div class="accordeon__dish-engl">{{{item.nameEngl}}}</div>
+               <a href="#{{{tag.id}}}">
+              <div class="accordeon__dish">{{{tag.name}}}</div>
             </a>
           </div>
           <ul class="accordeon__list">
-            {% for listItem in item.list %}
+            <!-- {% for listItem in item.list %}
             <li><a href="#">{{{ listItem.name }}}</a></li>
-            {% endfor %}
+            {% endfor %} -->
           </ul>
         </div>
         {% endfor %}
