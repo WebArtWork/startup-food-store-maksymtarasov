@@ -8,6 +8,7 @@
 	"moderators": [],
 	"scss": "scss/index.scss",
 	"variables": {
+		"storeName": "Pizzeria Dom",
 		"land_video": "/maksymtarasovdark/img/lands.MP4",
 		"land_image": "/maksymtarasovdark/img/2.webp",
 		"primary_color": "#d3c9b7",
@@ -15,6 +16,12 @@
 		"primary_text_color": "#000000",
 		"primary_radius": "0",
 		"secondar_radius": "0",
+
+		"swiper_img_1":"/maksymtarasovdark/img/slider/slide-foto-1.jpg",
+		"swiper_img_2":"/maksymtarasovdark/img/slider/slide-foto-2.jpg",
+		"swiper_img_3":"/maksymtarasovdark/img/slider/slide-foto-3.jpg",
+		"link_instagram": "https://instagram.com/kpcity2023?igshid=OGQ5ZDc2ODk2ZA==",
+		"link_tiktok": "https://www.facebook.com/profile.php?id=100094157589278",
 
 		"WIFIpassword": "12345678",
 		  "workingHours": "11:00 - 22:00",

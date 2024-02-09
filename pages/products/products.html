@@ -5,7 +5,7 @@
       <img class="logo__img" src="/maksymtarasovdark/img/logo/logo.jpg" alt="logo" />
     </a>
     <div class="header__text">
-      <div class="header__title">Pizzeria "Dom"</div>
+      <div class="header__title">{{{variables.storeName}}}</div>
       <div class="header__descr">Ресторан</div>
     </div>
   </div>
@@ -15,13 +15,13 @@
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <img src="/maksymtarasovdark/img/slider/slide-foto-1.jpg" alt="" />
+        <img src="{{{variables.swiper_img_1}}}" alt="" />
       </div>
       <div class="swiper-slide">
-        <img src="/maksymtarasovdark/img/slider/slide-foto-2.jpg" alt="" />
+        <img src="{{{variables.swiper_img_2}}}" alt="" />
       </div>
       <div class="swiper-slide">
-        <img src="/maksymtarasovdark/img/slider/slide-foto-3.jpg" alt="" />
+        <img src="{{{variables.swiper_img_3}}}" alt="" />
       </div>
     </div>
     <div class="swiper-button-next"></div>
@@ -34,7 +34,7 @@
   <div class="container main-container">
 
     <!-- Мобільне меню зверху -->
-    <div class="menu-top">
+    <!-- <div class="menu-top">
       <div class="product">
         <a href="#" class="product-popular">
           <img src="/maksymtarasovdark/img/icons/star.svg" alt="" />
@@ -58,11 +58,11 @@
       <a href="" class="menu-top__descr-link">гАСТРОНОМІЯ КУХНІ</a>
       <a href="" class="menu-top__descr-link">ЗАКУСКИ</a>
       <a href="" class="menu-top__descr-link">САЛАТИ</a>
-    </div>
+    </div> -->
     <!-- Мобільне меню зверху -->
 
     <section class="menu">
-      <a href="#">
+      <!-- <a href="#">
         <button class="menu__btn btn">
           <img src="/maksymtarasovdark/img/icons/food.svg" alt="" /> В закладі
         </button>
@@ -71,7 +71,7 @@
       <a href="#" class="menu-popular">
         <img src="/maksymtarasovdark/img/icons/star.svg" alt="star" />
         <p>Популярне</p>
-      </a>
+      </a> -->
 
       <div class="accordeon">
         {% for item in sidebar %}
@@ -94,7 +94,7 @@
 
     <section class="food">
       <div class="food-opening">
-        <div class="food-opening__img">
+        <!-- <div class="food-opening__img">
           <img
             src="/maksymtarasovdark/img/icons/exclamation-point.svg"
             alt="point"
@@ -103,7 +103,7 @@
         </div>
         <div class="food-opening__text">
           Ми відкриємось сьогодні о <span>{{{variables.openHours}}}</span>
-        </div>
+        </div> -->
       </div>
       {% for tag in tags %}
       <div class="food-category">
@@ -142,12 +142,12 @@
 
     <section class="information">
       <div class="information__search">
-        <form>
+        <!-- <form>
           <input type="text" placeholder="Назва страви" />
           <button type="submit">
             <img src="/maksymtarasovdark/img/icons/search.svg" alt="search" />
           </button>
-        </form>
+        </form> -->
       </div>
       <div class="informaton__data">
         <div class="information__title">Інформація про заклад</div>
@@ -193,7 +193,7 @@
         </div>
       </div>
 
-      <a href="#">
+      <!-- <a href="#">
         <button class="information__btn btn">
           <img src="/maksymtarasovdark/img/icons/message.svg" alt="" /> Надіслати відгук
         </button>
@@ -202,20 +202,20 @@
       <div class="information__descr">
         Винний погріб, дегустація вина, 🍕неаполітанська піца на дровах
         🍝італійська паста 🥩🍤м‘ясо та риба на грилі чи з печі, авторські суші.
-      </div>
+      </div> -->
     </section>
 
     <!-- Мобільне меню знизу -->
     <div class="menu-bottom">
-      <a href="#top" class="btn scroll-top">
+      <a href="#" class="btn scroll-top">
         <img src="/maksymtarasovdark/img/icons/arrow-up.svg" alt="up" />
         <div>На початок</div>
       </a>
-      <div class="menu-bottom__descr">
+      <!-- <div class="menu-bottom__descr">
         <span>ІНШІ СЕКЦІЇ:</span>
-      </div>
+      </div> -->
 
-      {% for item in sidebar %}
+      <!-- {% for item in sidebar %}
       <div class="menu-bottom__item">
         <a href="#">
           <div class="accordeon__dish">{{{item.name}}}</div>
@@ -223,7 +223,7 @@
         </a>
         <img src="/maksymtarasovdark/img/icons/arrow-right.svg" alt="" />
       </div>
-      {% endfor %}
+      {% endfor %} -->
     </div>
     <!-- Мобільне меню знизу -->
 
@@ -247,8 +247,8 @@
           </ul>
         </div>
         <div class="footer-info__time">
-          <div class="footer__title">Робочий час</div>
-          <ul>
+          <div class="footer__title"></div>
+          <!-- <ul>
             <li>
               <p>Понеділок</p>
               <p>11:00 - 22:00</p>
@@ -277,15 +277,16 @@
               <p>Неділя</p>
               <p>11:00 - 22:00</p>
             </li>
-          </ul>
+          </ul> -->
         </div>
       </div>
 
       <div class="footer-social">
         <div class="footer__title">Ми в соцмережах</div>
         <ul>
+          {% if variables.link_instagram %}
           <li>
-            <a href="#"
+            <a href="{{{variables.link_instagram}}}"
               ><img
                 class="footer-social__icon"
                 src="/maksymtarasovdark/img/icons/instagram.svg"
@@ -294,8 +295,10 @@
               <p>Instagram</p></a
             >
           </li>
+          {% endif %}
+          {% if variables.link_tiktok %}
           <li>
-            <a href="#"
+            <a href="{{{variables.link_tiktok}}}"
               ><img
                 class="footer-social__icon"
                 src="/maksymtarasovdark/img/icons/tiktok.svg"
@@ -304,29 +307,20 @@
               <p>TikTok</p></a
             >
           </li>
-          <li>
-            <a href="#"
-              ><img
-                class="footer-social__icon"
-                src="/maksymtarasovdark/img/icons/google.svg"
-                alt="soc"
-              />
-              <p>Google</p></a
-            >
-          </li>
+          {% endif %}
         </ul>
       </div>
 
       <div class="footer-map">
-        <div class="footer__title">На карті</div>
-        <div class="footer-map__place"></div>
+        <div class="footer__title"></div>
+        <!-- <div class="footer-map__place"></div>
         <a href="#">
           <button class="footer-map__btn btn">
             <img src="/maksymtarasovdark/img/icons/location.svg" alt="" /> Отримати
             розташування
           </button>
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -334,7 +328,7 @@
 
   <div class="container footer__inner">
     <div class="footer-copyright">
-      <div class="footer-copyright__copy">&copy; 2024 Pizzeria "Dom"</div>
+      <div class="footer-copyright__copy">&copy; 2024 {{{variables.storeName}}}</div>
       <div class="footer-copyright__list">
         <a href="#" class="footer-copyright__item"
           >Політика використання файлів cookie</a
