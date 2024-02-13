@@ -144,6 +144,7 @@
 				import Dom from '/api/wjst/dom';
 				import Productfavorite from '/api/wjst/productfavorite';
 				Dom.click('productId', (element) => {
+					console.log(element, element.getAttribute('productId'));
 					if (element.classList.contains('productFavorited')) {
 						element.classList.remove('productFavorited');
 						Productfavorite.delete({
