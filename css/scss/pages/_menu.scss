@@ -1,12 +1,17 @@
 .menu {
   position: sticky;
-  top: 120px;
+  // top: 120px;
+  top: 0;
   width: 272px;
   max-height: calc(100vh - 120px);
   overflow: auto;
   flex-shrink: 0;
-  padding-top: 24px;
+  padding-top: 40px;
   padding-bottom: 24px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 
   &__btn {
     width: 100%;
