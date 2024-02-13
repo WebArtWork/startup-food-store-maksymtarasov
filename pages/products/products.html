@@ -111,7 +111,7 @@
 			</div>
 			{% for tag in tags %}
 			<div class="food-category">
-				<div id="{{{tag._id|string}}}" class="food-category__title">{{{tag.name}}}</div>
+				<div id="{{{tag.id}}}" class="food-category__title">{{{tag.name}}}</div>
 				{% for product in tag.products %}
 				<div class="food-item" data-modal-id="modal{{{ product.id }}}">
 					<div class="food-item__left">
@@ -126,7 +126,7 @@
 							</div>
 							<div class="food-item__weight-number">{{{product.weight}}}</div>
 						</div>
-						<div class="food-item__controls">
+						<div class="food-item__controls {{{(productFavofite && productFavofite(product.id)) && 'productFavorited'}}}" productId="{{{product.id}}}">
 							<div class="food-item__controls-img">
 								<img src="/maksymtarasovdark/img/icons/heart.svg" alt="heart" />
 							</div>
@@ -140,7 +140,23 @@
 				{% endfor %}
 			</div>
 			{% endfor %}
-			<!-- тут удалять -->
+			<script type="module">
+				import Dom from '/api/wjst/dom';
+				import Productfavorite from '/api/wjst/productfavorite';
+				Dom.click('productId', (element) => {
+					if (element.classList.contains('productFavorited')) {
+						element.classList.remove('productFavorited');
+						Productfavorite.delete({
+							product: element.getAttribute('productId')
+						});
+					} else {
+						element.classList.add('productFavorited');
+						Productfavorite.create({
+							product: element.getAttribute('productId')
+						});
+					}
+				});
+			</script>
 		</section>
 
 		<section class="information">
@@ -331,7 +347,7 @@
 		</div>
 </footer>
 
-{% for tag in tags %}
+<!-- {% for tag in tags %}
 {% for product in tag.products %}
 <div id="modal{{{ product.id }}}" class="modal">
 	<div class="modal-content">
@@ -363,4 +379,4 @@
 	</div>
 </div>
 {% endfor %}
-{% endfor %}
+{% endfor %} -->
