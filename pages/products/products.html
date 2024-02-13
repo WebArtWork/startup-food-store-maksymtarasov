@@ -126,7 +126,7 @@
 							</div>
 							<div class="food-item__weight-number">{{{product.weight}}}</div>
 						</div>
-						<div class="food-item__controls {{{(productFavofite && productFavofite(product.id)) && 'productFavorited'}}}" productId="{{{product.id}}}">
+						<div class="food-item__controls {{{(productFavorited && productFavorited(product.id)) && 'productFavorited'}}}" productId="{{{product.id}}}">
 							<div class="food-item__controls-img">
 								<img src="/maksymtarasovdark/img/icons/heart.svg" alt="heart" />
 							</div>
@@ -144,6 +144,7 @@
 				import Dom from '/api/wjst/dom';
 				import Productfavorite from '/api/wjst/productfavorite';
 				Dom.click('productId', (element) => {
+					console.log(element, element.getAttribute('productId'));
 					if (element.classList.contains('productFavorited')) {
 						element.classList.remove('productFavorited');
 						Productfavorite.delete({
