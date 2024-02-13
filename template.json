@@ -25,6 +25,8 @@
     "gray": "#828282",
     "dark-gray": "#333333",
     "dark": "#222222",
+    "dark-main": "#161616",
+    "dark-headerFooter": "#1C1C1C",
     "darker": "#111111",
     "dark-green": "#0c4314",
     "green": "#099409",

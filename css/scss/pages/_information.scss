@@ -1,7 +1,8 @@
 
 .information {
   position: sticky;
-  top: 120px;
+  // top: 120px;
+  top: 0;
   width: 272px;
   max-height: calc(100vh - 120px);
   overflow: auto;
