@@ -40,7 +40,11 @@
 }
 
 @media (max-width: 768px) {
-  .swiper-section {
-    display: none;
+  // .swiper-section {
+  //   display: none;
+  // }
+
+  .swiper-horizontal{
+    height: auto;
   }
 }

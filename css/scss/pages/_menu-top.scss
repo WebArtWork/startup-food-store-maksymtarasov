@@ -1,9 +1,12 @@
 //Для моб версії
 .menu-top {
   display: none;
+  // position: sticky;
+  //   top: -1px;
 
   &__titles {
     height: 56px;
+    background-color: #161616;
   }
 
   &__titles,
@@ -20,7 +23,7 @@
     display: none;
     position: sticky;
     top: -1px;
-    background-color: $darker;
+    background-color: #161616;
     padding: 10px 0;
     margin-bottom: -10px;
   }
@@ -112,5 +115,6 @@
 
   .menu-top__descr {
     display: inherit;
+    padding-top: 20px;
   }
 }
