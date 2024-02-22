@@ -1,4 +1,8 @@
-
+.informaton__data-footer{
+  .information-item__descr{
+    color: $light-gray;
+  }
+}
 
 .footer {
   background-color: $dark-headerFooter;
@@ -12,7 +16,7 @@
   &__top {
     padding: 24px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 20px;
   }
 
@@ -29,6 +33,7 @@
   max-width: 400px;
 
   &__contacts {
+    max-width: 300px;
     li {
       padding-bottom: 15px;
     }
