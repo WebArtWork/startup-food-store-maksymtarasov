@@ -1,18 +1,6 @@
-<header class="header">
-  <div class="container header__inner">
-    <a href="" class="logo">
-      <img
-        class="logo__img"
-        src="/maksymtarasovdark/img/logo/logo.jpg"
-        alt="logo"
-      />
-    </a>
-    <div class="header__text">
-      <div class="header__title">Pizzeria "Dom"</div>
-      <div class="header__descr">Ресторан</div>
-    </div>
-  </div>
-</header>
+<div class="container">
+  <h1 class="title">Ласкаво просимо в піцерію <span>"Dom"</span> !</h1>
+</div>
 
 <section class="swiper-section swiper-section-index">
   <div class="swiper mySwiper">
@@ -34,236 +22,220 @@
 </section>
 
 <main class="index-main">
+  <section class="info-main">
+    <div class="container info-main__container">
+      <div class="information-item">
+        <div class="information-item__icon">
+          <img src="/maksymtarasovdark/img/icons/wifi.svg" alt="wifi" />
+        </div>
+        <div class="information-item__text">
+          <div class="information-item__title">WiFi</div>
+          <div class="information-item__descr">
+            {{{variables.WIFIpassword}}}
+          </div>
+        </div>
+      </div>
+      <div class="information-item">
+        <div class="information-item__icon">
+          <img src="/maksymtarasovdark/img/icons/watch.svg" alt="wifi" />
+        </div>
+        <div class="information-item__text">
+          <div class="information-item__title">Робочий час:</div>
+          <div class="information-item__descr">
+            {{{variables.workingHours}}}
+          </div>
+        </div>
+      </div>
+      <div class="information-item">
+        <div class="information-item__icon">
+          <img src="/maksymtarasovdark/img/icons/home.svg" alt="wifi" />
+        </div>
+        <div class="information-item__text">
+          <div class="information-item__title">Адреса:</div>
+          <div class="information-item__descr">{{{variables.address}}}</div>
+        </div>
+      </div>
+      <div class="information-item">
+        <div class="information-item__icon">
+          <img src="/maksymtarasovdark/img/icons/phone.svg" alt="wifi" />
+        </div>
+        <div class="information-item__text">
+          <div class="information-item__title">Телефон:</div>
+          <div class="information-item__descr">{{{variables.phone}}}</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <div class="container">
     <section class="new-food">
-      <h2 class="new-food__title">Наші новинки!:</h2>
+      <h2 class="new-food__title">Наші новинки:</h2>
 
       <div class="swiper-food">
         <div class="swiper mySwiper-food">
           <div class="swiper-wrapper">
-          <!-- Slides -->
+            <!-- Slides -->
 
-          {% for tag in tags %}
-          {% for product in tag.products %}
-          <div class="swiper-slide">
-				<div class="food-item food-item__new-popular" data-modal-id="modal{{{ product.id }}}">
-					<div class="food-item__left">
-						<div class="food-item__title">{{{product.name}}}</div>
-						<div class="food-item__price">
-							<span>{{{product.price}}}</span> UAH
-						</div>
-						<div class="food-item__descr">{{{product.descr}}}</div>
-					</div>
-					<div class="food-item__right">
-						<img src="{{{product.thumb}}}" alt="" />
-					</div>
-				</div>
-        
-      </div>
-      {% endfor %}
-      {% endfor %}
+            {% for tag in tags %} {% for product in tag.products %}
+            <div class="swiper-slide">
+              <div
+                class="food-item food-item__new-popular"
+                data-modal-id="modal{{{ product.id }}}"
+              >
+                <div class="food-item__left">
+                  <div class="food-item__title">{{{product.name}}}</div>
+                  <div class="food-item__price">
+                    <span>{{{product.price}}}</span> UAH
+                  </div>
+                  <div class="food-item__descr">{{{product.descr}}}</div>
+                </div>
+                <div class="food-item__right">
+                  <img src="{{{product.thumb}}}" alt="" />
+                </div>
+                <div class="new-food__new">NEW!</div>
+              </div>
+            </div>
+            {% endfor %} {% endfor %}
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
-    </div>
+
+      <a href="/products" class="btn main__button">Всі страви</a>
     </section>
 
     <section class="popular-food">
-      <h2 class="popular-food__title">Найпопулярніші страви!:</h2>
+      <h2 class="popular-food__title">Найпопулярніші страви:</h2>
 
       <div class="swiper-food">
         <div class="swiper mySwiper-food">
           <div class="swiper-wrapper">
-          <!-- Slides -->
+            <!-- Slides -->
 
-          {% for tag in tags %}
-          {% for product in tag.products %}
-          <div class="swiper-slide">
-				<div class="food-item food-item__new-popular" data-modal-id="modal{{{ product.id }}}">
-					<div class="food-item__left">
-						<div class="food-item__title">{{{product.name}}}</div>
-						<div class="food-item__price">
-							<span>{{{product.price}}}</span> UAH
-						</div>
-						<div class="food-item__descr">{{{product.descr}}}</div>
-					</div>
-					<div class="food-item__right">
-						<img src="{{{product.thumb}}}" alt="" />
-					</div>
-				</div>
-        
-      </div>
-      {% endfor %}
-      {% endfor %}
+            {% for tag in tags %} {% for product in tag.products %}
+            <div class="swiper-slide">
+              <div
+                class="food-item food-item__new-popular"
+                data-modal-id="modal{{{ product.id }}}"
+              >
+                <div class="food-item__left">
+                  <div class="food-item__title">{{{product.name}}}</div>
+                  <div class="food-item__price">
+                    <span>{{{product.price}}}</span> UAH
+                  </div>
+                  <div class="food-item__descr">{{{product.descr}}}</div>
+                </div>
+                <div class="food-item__right">
+                  <img src="{{{product.thumb}}}" alt="" />
+                </div>
+                <div class="popular-food__popular">HOT!</div>
+              </div>
+            </div>
+            {% endfor %} {% endfor %}
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
       </div>
-    </div>
+
+      <a href="/products" class="btn main__button">Всі страви</a>
+    </section>
+
+    <section class="articles-main">
+      <h2 class="articles-main__title">Новини:</h2>
+      <div class="articles-list">
+
+        <div class="articles-item">
+			<div class="articles-item__img">
+				<img src="/maksymtarasovdark/img/articles/article1.jpg" alt="">
+			</div>
+			<div class="articles-item__info">
+				<div class="articles-item__date">
+					<img src="/maksymtarasovdark/img/icons/clock.svg" alt="">
+					<span>22.02.2024</span>
+				</div>
+				<h3 class="articles-item__title">Щасливі години в Pesto Cafe</h3>
+				<div class="articles-item__descr">Тільки в ресторанах! По буднях з 15:00 до 17:00 друга піца та паста за 0 грн</div>
+				<a href="" class="articles-item__btn">
+					<span>Детальніше</span>
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,256,256"><g fill="#f6f6f6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(3.2,256) scale(0.26667,0.26667)"><path d="M504,-480l-184,-184l56,-56l240,240l-240,240l-56,-56z"></path></g></g></svg>
+				</a>
+			</div>
+		</div>
+
+		<div class="articles-item">
+			<div class="articles-item__img">
+				<img src="/maksymtarasovdark/img/articles/article2.jpg" alt="">
+			</div>
+			<div class="articles-item__info">
+				<div class="articles-item__date">
+					<img src="/maksymtarasovdark/img/icons/clock.svg" alt="">
+					<span>21.02.2024</span>
+				</div>
+				<h3 class="articles-item__title">Знижка 10% на страви із собою</h3>
+				<div class="articles-item__descr">При замовленні страв із собою ви отримуєте знижку 10% в усіх ресторанах PESTO FAMILY
+					При замовленні страв із собою ви отримуєте знижку 10% в усіх ресторанах PESTO FAMILY
+				</div>
+				<a href="" class="articles-item__btn">
+					<span>Детальніше</span>
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,256,256"><g fill="#f6f6f6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(3.2,256) scale(0.26667,0.26667)"><path d="M504,-480l-184,-184l56,-56l240,240l-240,240l-56,-56z"></path></g></g></svg>
+				</a>
+			</div>
+		</div>
+
+      </div>
+
+      <a href="/articles" class="btn main__button">Всі новини</a>
     </section>
   </div>
 
-    <section class="dignity">
-      <div class="container dignity__container">
-
-       <div class="dignity-item">
-         <div class="dignity-item__title">Багато різновидів піц</div>
+  <section class="dignity">
+    <div class="container dignity__container">
+      <div class="dignity-item">
         <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/pizza.jpg" alt="">
+          <img src="/maksymtarasovdark/img/dignity/employee.svg" alt="" />
         </div>
+        <div class="dignity-item__title">Дружній сервіс</div>
         <div class="dignity-item__descr">
-          Піклуйся про свій смак разом з нашим різноманітним вибором піц, що точно вразять ваші смакові рецептори.
+          У Dom cafe має бути friendly. Наші гості – наші друзі!
         </div>
-       </div>
-
-       <div class="dignity-item">
-         <div class="dignity-item__title">Свіжі якісні продукти</div>
-        <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/food.jpg" alt="">
-        </div>
-        <div class="dignity-item__descr">Забезпеч своє тіло тільки найкращими продуктами, що пропонує наша кухня. Смакуй якість кожного ковтка!
-          </div>
-       </div>
-
-       <div class="dignity-item">
-         <div class="dignity-item__title">Коктейлі які ти точно не куштував</div>
-        <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/drinks.jpg" alt="">
-        </div>
-        <div class="dignity-item__descr">Відкрий для себе нові смакові відчуття з нашими унікальними коктейлями, які точно здивують тебе своєю оригінальністю.
-          Підкресли свою індивідуальність разом з нашими незвичайними коктейлями, які вражають не лише смак, але й уяву.
-          </div>
-       </div>
-
       </div>
-    </section>
 
+      <div class="dignity-item">
+        <div class="dignity-item__img">
+          <img src="/maksymtarasovdark/img/dignity/menu.svg" alt="" />
+        </div>
+        <div class="dignity-item__title">Оригінальні рецепти</div>
+        <div class="dignity-item__descr">
+          Ми готуємо наші страви виключно за авторськими рецептами, які створили
+          самі.
+        </div>
+      </div>
+
+      <div class="dignity-item">
+        <div class="dignity-item__img">
+          <img src="/maksymtarasovdark/img/dignity/map.svg" alt="" />
+        </div>
+        <div class="dignity-item__title">Зручні локації</div>
+        <div class="dignity-item__descr">
+          Чим далі, тим більше. Dom cafe поки що – два, але незабаром відкриття
+          нових.
+        </div>
+      </div>
+
+      <div class="dignity-item">
+        <div class="dignity-item__img">
+          <img src="/maksymtarasovdark/img/dignity/motorcycle.svg" alt="" />
+        </div>
+        <div class="dignity-item__title">Швидка доставка</div>
+        <div class="dignity-item__descr">
+          Діє доставка кур’єром по Кам'янець-Подільську.
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-
-<footer class="footer">
-	<div class="container footer__inner">
-		<div class="footer__top">
-			<div class="informaton__data informaton__data-footer">
-				<div class="footer__title">Інформація про заклад</div>
-				<div class="information-item">
-					<div class="information-item__icon">
-						<img src="/maksymtarasovdark/img/icons/wifi.svg" alt="wifi" />
-					</div>
-					<div class="information-item__text">
-						<div class="information-item__title">WiFi</div>
-						<div class="information-item__descr">
-							{{{variables.WIFIpassword}}}
-						</div>
-					</div>
-				</div>
-				<div class="information-item">
-					<div class="information-item__icon">
-						<img src="/maksymtarasovdark/img/icons/watch.svg" alt="wifi" />
-					</div>
-					<div class="information-item__text">
-						<div class="information-item__title">Робочий час:</div>
-						<div class="information-item__descr">
-							{{{variables.workingHours}}}
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<div class="footer-info">
-				<div class="footer-info__contacts">
-					<div class="footer__title">Контактні дані</div>
-					<ul>
-						<li>{{{variables.address}}}</li>
-						<li>{{{variables.phone}}}</li>
-						<li>
-							<a class="link-bold" href="{{{variables.email}}}">
-								{{{variables.email}}}</a>
-						</li>
-					</ul>
-				</div>
-				<div class="footer-info__time">
-					<div class="footer__title"></div>
-					<!-- <ul>
-					<li>
-					<p>Понеділок</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					<li>
-					<p>Вівторок</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					<li>
-					<p>Середа</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					<li>
-					<p>Четвер</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					<li>
-					<p>П’ятниця</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					<li>
-					<p>Субота</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					<li>
-					<p>Неділя</p>
-					<p>11:00 - 22:00</p>
-					</li>
-					</ul> -->
-				</div>
-			</div>
-
-			{% if variables.link_instagram %}
-			<div class="footer-social">
-				<div class="footer__title">Ми в соцмережах</div>
-				<ul>
-					{% if variables.link_instagram %}
-					<li>
-						<a href="{{{variables.link_instagram}}}"><img class="footer-social__icon" src="/maksymtarasovdark/img/icons/instagram.svg" alt="soc" />
-							<p>Instagram</p>
-						</a>
-					</li>
-					{% endif %}
-					{% if variables.link_tiktok %}
-					<li>
-						<a href="{{{variables.link_tiktok}}}"><img class="footer-social__icon" src="/maksymtarasovdark/img/icons/tiktok.svg" alt="soc" />
-							<p>TikTok</p>
-						</a>
-					</li>
-					{% endif %}
-				</ul>
-			</div>
-
-			<!-- <div class="footer-map">
-				<div class="footer__title"></div>
-				<div class="footer-map__place"></div>
-				<a href="#">
-				<button class="footer-map__btn btn">
-				<img src="/maksymtarasovdark/img/icons/location.svg" alt="" /> Отримати
-				розташування
-				</button>
-				</a>
-				</div>
-			</div> -->
-		</div>
-
-		<div class="footer__line"></div>
-
-		<div class="container footer__inner">
-			<div class="footer-copyright">
-				<div class="footer-copyright__copy">&copy; 2024 {{{store.name}}}</div>
-				<div class="footer-copyright__list">
-					<a href="#" class="footer-copyright__item">Політика використання файлів cookie</a>
-					<!-- <a href="#" class="footer-copyright__item">Умови користування</a> -->
-					<!-- <a href="#" class="footer-copyright__item">Політика конфіденційності</a> -->
-				</div>
-			</div>
-		</div>
-</footer>
 
 {% for tag in tags %} {% for product in tag.products %}
 <div id="modal{{{ product.id }}}" class="modal">

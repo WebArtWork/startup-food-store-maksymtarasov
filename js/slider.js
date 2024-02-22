@@ -7,14 +7,21 @@ let swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+
+  autoplay: {
+    delay: 8000,
+    disableOnInteraction: false,
+  },
+
+
   mousewhel: true,
   ketboard: true,
 });
 
 let swiperFood = new Swiper(".mySwiper-food", {
   direction: 'horizontal', // изменение направления на горизонтальное
-  slidesPerView: 3, // отображение 4 элементов
-  spaceBetween: 1, // расстояние между элементами
+  slidesPerView: 1, // отображение 4 элементов
+  spaceBetween: 20, // расстояние между элементами
 
   loop: true,
   speed: 800,
@@ -35,6 +42,19 @@ let swiperFood = new Swiper(".mySwiper-food", {
     el: '.swiper-scrollbar',
   },
 
+  breakpoints: {
+    // При ширине экрана от 1100px и выше
+    1100: {
+      slidesPerView: 3, // Отображаем 2 элемента
+      slidesPerGroup: 2, // Прокручиваем по 1 элементу
+    },
+    768: {
+      slidesPerView: 2, // Отображаем 2 элемента
+      slidesPerGroup: 1,
+    }
+  },
+    
+
   // автоматическая прокрутка
   // autoplay: {
   //   delay: 10000,
@@ -42,5 +62,5 @@ let swiperFood = new Swiper(".mySwiper-food", {
   // },
 
   // скролл по 2 элемента вперёд
-  slidesPerGroup: 2,
+  slidesPerGroup: 1,
 });
