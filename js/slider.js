@@ -19,48 +19,42 @@ let swiper = new Swiper(".mySwiper", {
 });
 
 let swiperFood = new Swiper(".mySwiper-food", {
-  direction: 'horizontal', // изменение направления на горизонтальное
-  slidesPerView: 1, // отображение 4 элементов
-  spaceBetween: 20, // расстояние между элементами
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 20,
 
   loop: true,
   speed: 800,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 
   breakpoints: {
-    // При ширине экрана от 1100px и выше
     1100: {
-      slidesPerView: 3, // Отображаем 2 элемента
-      slidesPerGroup: 2, // Прокручиваем по 1 элементу
+      slidesPerView: 3,
+      slidesPerGroup: 2,
     },
     768: {
-      slidesPerView: 2, // Отображаем 2 элемента
+      slidesPerView: 2,
       slidesPerGroup: 1,
     }
   },
     
 
-  // автоматическая прокрутка
-  // autoplay: {
-  //   delay: 10000,
-  //   disableOnInteraction: true,
-  // },
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: true,
+  },
 
-  // скролл по 2 элемента вперёд
   slidesPerGroup: 1,
 });

@@ -1,58 +1,142 @@
 {
-	"title": "Cool Title",
-	"tags": [
+	"name": "index",
+	"top_products": [
 		{
-			"name": "ГАСТРОНОМІЯ",
-			"products": [
-				{
-					"id": "/product7",
-					"price": 200,
-					"weight": "240г",
-					"descr": "Tальята (телятина обсмажена на сковороді з помодоріні, мікс салатів, сир пармезан, грецькі горіхи, соус)",
-					"thumb": "/maksymtarasovdark/img/menu-food/food-1.jpg",
-					"name": "Tagliata"
-				},
-				{
-					"id": "/product8",
-					"price": 210,
-					"weight": "260г",
-					"descr": "Поза-поза (королівські креветки обсмажені, мікс салату, помодоріні, порей, пармезан, кунжут, соус з оливкової олії, французької гірчиці та винного оцту)",
-					"thumb": "/maksymtarasovdark/img/menu-food/food-2.jpg",
-					"name": "Posa-posa"
-				},
-				{
-					"id": "/product9",
-					"price": 205,
-					"weight": "280г",
-					"descr": "Тутто (перець болгарський, мікс салатів, пармезан, перепелине яйце, стручкова квасоля, крутони, кунжут, соус на вершковій основі)",
-					"thumb": "/maksymtarasovdark/img/menu-food/food-3.jpg",
-					"name": "Tutto"
-				},
-				{
-					"id": "/product7",
-					"price": 200,
-					"weight": "240г",
-					"descr": "Tальята (телятина обсмажена на сковороді з помодоріні, мікс салатів, сир пармезан, грецькі горіхи, соус)",
-					"thumb": "/maksymtarasovdark/img/menu-food/food-1.jpg",
-					"name": "Tagliata"
-				},
-				{
-					"id": "/product8",
-					"price": 210,
-					"weight": "260г",
-					"descr": "Поза-поза (королівські креветки обсмажені, мікс салату, помодоріні, порей, пармезан, кунжут, соус з оливкової олії, французької гірчиці та винного оцту)",
-					"thumb": "/maksymtarasovdark/img/menu-food/food-2.jpg",
-					"name": "Posa-posa"
-				},
-				{
-					"id": "/product9",
-					"price": 205,
-					"weight": "280г",
-					"descr": "Тутто (перець болгарський, мікс салатів, пармезан, перепелине яйце, стручкова квасоля, крутони, кунжут, соус на вершковій основі)",
-					"thumb": "/maksymtarasovdark/img/menu-food/food-3.jpg",
-					"name": "Tutto"
-				}
-			]
+			"id": "/product7",
+			"price": 200,
+			"weight": "240г",
+			"descr": "Tальята (телятина обсмажена на сковороді з помодоріні, мікс салатів, сир пармезан, грецькі горіхи, соус)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-1.jpg",
+			"name": "Tagliata"
+		},
+		{
+			"id": "/product8",
+			"price": 210,
+			"weight": "260г",
+			"descr": "Поза-поза (королівські креветки обсмажені, мікс салату, помодоріні, порей, пармезан, кунжут, соус з оливкової олії, французької гірчиці та винного оцту)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-2.jpg",
+			"name": "Posa-posa"
+		},
+		{
+			"id": "/product9",
+			"price": 205,
+			"weight": "280г",
+			"descr": "Тутто (перець болгарський, мікс салатів, пармезан, перепелине яйце, стручкова квасоля, крутони, кунжут, соус на вершковій основі)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-3.jpg",
+			"name": "Tutto"
+		},
+		{
+			"id": "/product7",
+			"price": 200,
+			"weight": "240г",
+			"descr": "Tальята (телятина обсмажена на сковороді з помодоріні, мікс салатів, сир пармезан, грецькі горіхи, соус)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-1.jpg",
+			"name": "Tagliata"
+		},
+		{
+			"id": "/product8",
+			"price": 210,
+			"weight": "260г",
+			"descr": "Поза-поза (королівські креветки обсмажені, мікс салату, помодоріні, порей, пармезан, кунжут, соус з оливкової олії, французької гірчиці та винного оцту)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-2.jpg",
+			"name": "Posa-posa"
+		},
+		{
+			"id": "/product9",
+			"price": 205,
+			"weight": "280г",
+			"descr": "Тутто (перець болгарський, мікс салатів, пармезан, перепелине яйце, стручкова квасоля, крутони, кунжут, соус на вершковій основі)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-3.jpg",
+			"name": "Tutto"
+		}
+	],
+
+	"products": [
+		{
+			"id": "/product7",
+			"price": 200,
+			"weight": "240г",
+			"descr": "Tальята (телятина обсмажена на сковороді з помодоріні, мікс салатів, сир пармезан, грецькі горіхи, соус)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-1.jpg",
+			"name": "Tagliata"
+		},
+		{
+			"id": "/product8",
+			"price": 210,
+			"weight": "260г",
+			"descr": "Поза-поза (королівські креветки обсмажені, мікс салату, помодоріні, порей, пармезан, кунжут, соус з оливкової олії, французької гірчиці та винного оцту)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-2.jpg",
+			"name": "Posa-posa"
+		},
+		{
+			"id": "/product9",
+			"price": 205,
+			"weight": "280г",
+			"descr": "Тутто (перець болгарський, мікс салатів, пармезан, перепелине яйце, стручкова квасоля, крутони, кунжут, соус на вершковій основі)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-3.jpg",
+			"name": "Tutto"
+		},
+		{
+			"id": "/product7",
+			"price": 200,
+			"weight": "240г",
+			"descr": "Tальята (телятина обсмажена на сковороді з помодоріні, мікс салатів, сир пармезан, грецькі горіхи, соус)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-1.jpg",
+			"name": "Tagliata"
+		},
+		{
+			"id": "/product8",
+			"price": 210,
+			"weight": "260г",
+			"descr": "Поза-поза (королівські креветки обсмажені, мікс салату, помодоріні, порей, пармезан, кунжут, соус з оливкової олії, французької гірчиці та винного оцту)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-2.jpg",
+			"name": "Posa-posa"
+		},
+		{
+			"id": "/product9",
+			"price": 205,
+			"weight": "280г",
+			"descr": "Тутто (перець болгарський, мікс салатів, пармезан, перепелине яйце, стручкова квасоля, крутони, кунжут, соус на вершковій основі)",
+			"thumb": "/maksymtarasovdark/img/menu-food/food-3.jpg",
+			"name": "Tutto"
+		}
+	],
+
+	"articles": [
+		{
+			"thumb": "/maksymtarasovdark/img/articles/article1.jpg",
+			"name": "Щасливі години в DOM",
+			"description": "Тільки в ресторанах! По буднях з 15:00 до 17:00 друга піца та паста за 100 грн",
+			"date": "22.02.2024"
+		},
+		{
+			"thumb": "/maksymtarasovdark/img/articles/article2.jpg",
+			"name": "Знижка 10% на страви із собою",
+			"description": "При замовленні страв із собою ви отримуєте знижку 10% в усіх ресторанах DOM При замовленні страв із собою ви отримуєте знижку 10% в усіх ресторанах DOM",
+			"date": "21.02.2024"
+		}
+	],
+
+	"dignity": [
+		{
+			"thumb": "/maksymtarasovdark/img/dignity/employee.svg",
+			"name": "Дружній сервіс",
+			"description": "У Dom cafe має бути friendly. Наші гості – наші друзі!"
+		},
+		{
+			"thumb": "/maksymtarasovdark/img/dignity/menu.svg",
+			"name": "Оригінальні рецепти",
+			"description": "Ми готуємо наші страви виключно за авторськими рецептами, які створили самі."
+		},
+		{
+			"thumb": "/maksymtarasovdark/img/dignity/map.svg",
+			"name": "Зручні локації",
+			"description": " Чим далі, тим більше. Dom cafe поки що – два, але незабаром відкриття нових."
+		},
+		{
+			"thumb": "/maksymtarasovdark/img/dignity/motorcycle.svg",
+			"name": "Швидка доставка",
+			"description": "Діє доставка кур’єром по Кам'янець-Подільську."
 		}
 	]
 }

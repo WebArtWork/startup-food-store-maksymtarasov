@@ -22,6 +22,7 @@
 </section>
 
 <main class="index-main">
+  
   <section class="info-main">
     <div class="container info-main__container">
       <div class="information-item">
@@ -70,13 +71,12 @@
   <div class="container">
     <section class="new-food">
       <h2 class="new-food__title">Наші новинки:</h2>
-
       <div class="swiper-food">
         <div class="swiper mySwiper-food">
           <div class="swiper-wrapper">
             <!-- Slides -->
 
-            {% for tag in tags %} {% for product in tag.products %}
+            {% for product in top_products %}
             <div class="swiper-slide">
               <div
                 class="food-item food-item__new-popular"
@@ -95,25 +95,24 @@
                 <div class="new-food__new">NEW!</div>
               </div>
             </div>
-            {% endfor %} {% endfor %}
+            {% endfor %}
+
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
       </div>
-
       <a href="/products" class="btn main__button">Всі страви</a>
     </section>
 
     <section class="popular-food">
       <h2 class="popular-food__title">Найпопулярніші страви:</h2>
-
       <div class="swiper-food">
         <div class="swiper mySwiper-food">
           <div class="swiper-wrapper">
             <!-- Slides -->
 
-            {% for tag in tags %} {% for product in tag.products %}
+            {% for product in products %}
             <div class="swiper-slide">
               <div
                 class="food-item food-item__new-popular"
@@ -132,13 +131,13 @@
                 <div class="popular-food__popular">HOT!</div>
               </div>
             </div>
-            {% endfor %} {% endfor %}
+            {% endfor %}
+
           </div>
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
         </div>
       </div>
-
       <a href="/products" class="btn main__button">Всі страви</a>
     </section>
 
@@ -146,125 +145,78 @@
       <h2 class="articles-main__title">Новини:</h2>
       <div class="articles-list">
 
+        {% for article in articles %}
         <div class="articles-item">
-			<div class="articles-item__img">
-				<img src="/maksymtarasovdark/img/articles/article1.jpg" alt="">
-			</div>
-			<div class="articles-item__info">
-				<div class="articles-item__date">
-					<img src="/maksymtarasovdark/img/icons/clock.svg" alt="">
-					<span>22.02.2024</span>
-				</div>
-				<h3 class="articles-item__title">Щасливі години в Pesto Cafe</h3>
-				<div class="articles-item__descr">Тільки в ресторанах! По буднях з 15:00 до 17:00 друга піца та паста за 0 грн</div>
-				<a href="" class="articles-item__btn">
-					<span>Детальніше</span>
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,256,256"><g fill="#f6f6f6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(3.2,256) scale(0.26667,0.26667)"><path d="M504,-480l-184,-184l56,-56l240,240l-240,240l-56,-56z"></path></g></g></svg>
-				</a>
-			</div>
-		</div>
-
-		<div class="articles-item">
-			<div class="articles-item__img">
-				<img src="/maksymtarasovdark/img/articles/article2.jpg" alt="">
-			</div>
-			<div class="articles-item__info">
-				<div class="articles-item__date">
-					<img src="/maksymtarasovdark/img/icons/clock.svg" alt="">
-					<span>21.02.2024</span>
-				</div>
-				<h3 class="articles-item__title">Знижка 10% на страви із собою</h3>
-				<div class="articles-item__descr">При замовленні страв із собою ви отримуєте знижку 10% в усіх ресторанах PESTO FAMILY
-					При замовленні страв із собою ви отримуєте знижку 10% в усіх ресторанах PESTO FAMILY
-				</div>
-				<a href="" class="articles-item__btn">
-					<span>Детальніше</span>
-					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0,0,256,256"><g fill="#f6f6f6" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="translate(3.2,256) scale(0.26667,0.26667)"><path d="M504,-480l-184,-184l56,-56l240,240l-240,240l-56,-56z"></path></g></g></svg>
-				</a>
-			</div>
-		</div>
+          <div class="articles-item__img">
+            <img src="{{{article.thumb}}}" alt="" />
+          </div>
+          <div class="articles-item__info">
+            <div class="articles-item__date">
+              <img src="/maksymtarasovdark/img/icons/clock.svg" alt="" />
+              <span>{{{article.date}}}</span>
+            </div>
+            <h3 class="articles-item__title">{{{article.name}}}</h3>
+            <div class="articles-item__descr">
+              {{{article.description}}}
+            </div>
+            <a href="/article" class="articles-item__btn">
+              <span>Детальніше</span>
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                width="24"
+                height="24"
+                viewBox="0,0,256,256"
+              >
+                <g
+                  fill="#f6f6f6"
+                  fill-rule="nonzero"
+                  stroke="none"
+                  stroke-width="1"
+                  stroke-linecap="butt"
+                  stroke-linejoin="miter"
+                  stroke-miterlimit="10"
+                  stroke-dasharray=""
+                  stroke-dashoffset="0"
+                  font-family="none"
+                  font-weight="none"
+                  font-size="none"
+                  text-anchor="none"
+                  style="mix-blend-mode: normal"
+                >
+                  <g transform="translate(3.2,256) scale(0.26667,0.26667)">
+                    <path
+                      d="M504,-480l-184,-184l56,-56l240,240l-240,240l-56,-56z"
+                    ></path>
+                  </g>
+                </g>
+              </svg>
+            </a>
+          </div>
+        </div>
+        {% endfor %}
 
       </div>
-
       <a href="/articles" class="btn main__button">Всі новини</a>
     </section>
   </div>
 
   <section class="dignity">
     <div class="container dignity__container">
-      <div class="dignity-item">
-        <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/employee.svg" alt="" />
-        </div>
-        <div class="dignity-item__title">Дружній сервіс</div>
-        <div class="dignity-item__descr">
-          У Dom cafe має бути friendly. Наші гості – наші друзі!
-        </div>
-      </div>
 
+      {% for item in dignity %}
       <div class="dignity-item">
         <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/menu.svg" alt="" />
+          <img src="{{{item.thumb}}}" alt="" />
         </div>
-        <div class="dignity-item__title">Оригінальні рецепти</div>
+        <div class="dignity-item__title">{{{item.name}}}</div>
         <div class="dignity-item__descr">
-          Ми готуємо наші страви виключно за авторськими рецептами, які створили
-          самі.
+          {{{item.description}}}
         </div>
       </div>
+      {% endfor %}
 
-      <div class="dignity-item">
-        <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/map.svg" alt="" />
-        </div>
-        <div class="dignity-item__title">Зручні локації</div>
-        <div class="dignity-item__descr">
-          Чим далі, тим більше. Dom cafe поки що – два, але незабаром відкриття
-          нових.
-        </div>
-      </div>
-
-      <div class="dignity-item">
-        <div class="dignity-item__img">
-          <img src="/maksymtarasovdark/img/dignity/motorcycle.svg" alt="" />
-        </div>
-        <div class="dignity-item__title">Швидка доставка</div>
-        <div class="dignity-item__descr">
-          Діє доставка кур’єром по Кам'янець-Подільську.
-        </div>
-      </div>
     </div>
   </section>
 </main>
-
-{% for tag in tags %} {% for product in tag.products %}
-<div id="modal{{{ product.id }}}" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <div class="food-item__modal">
-      <div class="food-item__left">
-        <div class="food-item__title">{{{ product.name }}}</div>
-        <div class="food-item__price">
-          <span>{{{ product.price }}}</span> UAH
-        </div>
-        <div class="food-item__descr">{{{ product.short }}}</div>
-        <div class="food-item__weight">
-          <div class="food-item__weight-img">
-            <img src="/maksymtarasovdark/img/icons/weight.svg" alt="weight" />
-          </div>
-          <div class="food-item__weight-number">{{{ product.weight }}}</div>
-        </div>
-        <div class="food-item__controls">
-          <div class="food-item__controls-img">
-            <img src="/maksymtarasovdark/img/icons/heart.svg" alt="heart" />
-          </div>
-          <div class="food-item__controls-number">999</div>
-        </div>
-      </div>
-      <div class="food-item__right">
-        <img src="{{{ product.thumb }}}" alt="" />
-      </div>
-    </div>
-  </div>
-</div>
-{% endfor %} {% endfor %}
