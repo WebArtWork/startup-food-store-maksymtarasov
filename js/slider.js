@@ -7,40 +7,54 @@ let swiper = new Swiper(".mySwiper", {
   pagination: {
     el: ".swiper-pagination",
   },
+
+  autoplay: {
+    delay: 8000,
+    disableOnInteraction: false,
+  },
+
+
   mousewhel: true,
   ketboard: true,
 });
 
 let swiperFood = new Swiper(".mySwiper-food", {
-  direction: 'horizontal', // изменение направления на горизонтальное
-  slidesPerView: 3, // отображение 4 элементов
-  spaceBetween: 1, // расстояние между элементами
+  direction: 'horizontal',
+  slidesPerView: 1,
+  spaceBetween: 20,
 
   loop: true,
   speed: 800,
 
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
 
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
 
-  // And if we need scrollbar
   scrollbar: {
     el: '.swiper-scrollbar',
   },
 
-  // автоматическая прокрутка
-  // autoplay: {
-  //   delay: 10000,
-  //   disableOnInteraction: true,
-  // },
+  breakpoints: {
+    1100: {
+      slidesPerView: 3,
+      slidesPerGroup: 2,
+    },
+    768: {
+      slidesPerView: 2,
+      slidesPerGroup: 1,
+    }
+  },
+    
 
-  // скролл по 2 элемента вперёд
-  slidesPerGroup: 2,
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: true,
+  },
+
+  slidesPerGroup: 1,
 });

@@ -46,7 +46,103 @@
     </style>
   </head>
   <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="" class="logo">
+          <img
+            class="logo__img"
+            src="/maksymtarasovdark/img/logo/logo.jpg"
+            alt="logo"
+          />
+        </a>
+        <div class="header__text">
+          <div class="header__title">Pizzeria "Dom"</div>
+          <div class="header__descr">Ресторан</div>
+        </div>
+      </div>
+    </header>
+
     <!-- HTML -->
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="footer__top">
+          <div class="informaton__data informaton__data-footer">
+            <div class="footer__title">Інформація про заклад</div>
+            <div class="information-item">
+              <div class="information-item__icon">
+                <img src="/maksymtarasovdark/img/icons/wifi.svg" alt="wifi" />
+              </div>
+              <div class="information-item__text">
+                <div class="information-item__title">WiFi</div>
+                <div class="information-item__descr">
+                  {{{variables.WIFIpassword}}}
+                </div>
+              </div>
+            </div>
+            <div class="information-item">
+              <div class="information-item__icon">
+                <img src="/maksymtarasovdark/img/icons/watch.svg" alt="wifi" />
+              </div>
+              <div class="information-item__text">
+                <div class="information-item__title">Робочий час:</div>
+                <div class="information-item__descr">
+                  {{{variables.workingHours}}}
+                </div>
+              </div>
+            </div>
+          </div>
+    
+          <div class="footer-info">
+            <div class="footer-info__contacts">
+              <div class="footer__title">Контактні дані</div>
+              <ul>
+                <li>{{{variables.address}}}</li>
+                <li>{{{variables.phone}}}</li>
+                <li>
+                  <a class="link-bold" href="{{{variables.email}}}">
+                    {{{variables.email}}}</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer-info__time">
+              <div class="footer__title"></div>
+            </div>
+          </div>
+    
+          {% if variables.link_instagram %}
+          <div class="footer-social">
+            <div class="footer__title">Ми в соцмережах</div>
+            <ul>
+              {% if variables.link_instagram %}
+              <li>
+                <a href="{{{variables.link_instagram}}}"><img class="footer-social__icon" src="/maksymtarasovdark/img/icons/instagram.svg" alt="soc" />
+                  <p>Instagram</p>
+                </a>
+              </li>
+              {% endif %}
+              {% if variables.link_tiktok %}
+              <li>
+                <a href="{{{variables.link_tiktok}}}"><img class="footer-social__icon" src="/maksymtarasovdark/img/icons/tiktok.svg" alt="soc" />
+                  <p>TikTok</p>
+                </a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+    
+        <div class="footer__line"></div>
+    
+        <div class="container footer__inner">
+          <div class="footer-copyright">
+            <div class="footer-copyright__copy">&copy; 2024 {{{store.name}}}</div>
+            <div class="footer-copyright__list">
+              <a href="#" class="footer-copyright__item">Політика використання файлів cookie</a>
+            </div>
+          </div>
+        </div>
+    </footer>
     <script src="/maksymtarasovdark/js/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/maksymtarasovdark/js/slider.js"></script>
