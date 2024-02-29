@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           link.classList.add('active');
 
-          return true; // Возвращаем true для стандартного поведения ссылки
+          return true;
       });
   });
 });
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
           link.classList.add('active');
 
-          return true; // Возвращаем true для стандартного поведения ссылки
+          return true;
       });
   });
 });

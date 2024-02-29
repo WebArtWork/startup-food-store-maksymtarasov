@@ -473,6 +473,23 @@
   align-items: center;
 }
 
+// .close::before,
+// .close::after {
+//   content: "";
+//   position: absolute;
+//   width: 2px;
+//   height: 20px;
+//   background-color: $white;
+// }
+
+// .close::before {
+//   transform: rotate(45deg);
+// }
+
+// .close::after {
+//   transform: rotate(-45deg);
+// }
+
 @keyframes fadeIn {
   from {
     opacity: 0;
