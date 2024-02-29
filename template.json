@@ -53,7 +53,8 @@
   },
   "store": {
     "name": "Store Name",
-    "description": "Store Description"
+    "description": "Store Description",
+    "thumb": "/maksymtarasovdark/img/logo/logo.jpg"
   },
   "footer": {
     "products": [

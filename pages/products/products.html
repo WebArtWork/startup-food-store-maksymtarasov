@@ -161,6 +161,7 @@
 			</div>
 			<div class="informaton__data">
 				<div class="information__title">Інформація про заклад</div>
+				{% if variables.WIFIpassword %}
 				<div class="information-item">
 					<div class="information-item__icon">
 						<img src="/maksymtarasovdark/img/icons/wifi.svg" alt="wifi" />
@@ -172,6 +173,8 @@
 						</div>
 					</div>
 				</div>
+				{% endif %}
+				{% if variables.workingHours %}
 				<div class="information-item">
 					<div class="information-item__icon">
 						<img src="/maksymtarasovdark/img/icons/watch.svg" alt="wifi" />
@@ -183,6 +186,8 @@
 						</div>
 					</div>
 				</div>
+				{% endif %}
+				{% if variables.address %}
 				<div class="information-item">
 					<div class="information-item__icon">
 						<img src="/maksymtarasovdark/img/icons/home.svg" alt="wifi" />
@@ -192,6 +197,8 @@
 						<div class="information-item__descr">{{{variables.address}}}</div>
 					</div>
 				</div>
+				{% endif %}
+				{% if variables.phone %}
 				<div class="information-item">
 					<div class="information-item__icon">
 						<img src="/maksymtarasovdark/img/icons/phone.svg" alt="wifi" />
@@ -201,6 +208,7 @@
 						<div class="information-item__descr">{{{variables.phone}}}</div>
 					</div>
 				</div>
+				{% endif %}
 			</div>
 
 			<!-- <a href="#">

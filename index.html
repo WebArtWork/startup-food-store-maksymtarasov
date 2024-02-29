@@ -51,12 +51,12 @@
         <a href="" class="logo">
           <img
             class="logo__img"
-            src="/maksymtarasovdark/img/logo/logo.jpg"
+            src="{{{store.thumb}}}"
             alt="logo"
           />
         </a>
         <div class="header__text">
-          <div class="header__title">Pizzeria "Dom"</div>
+          <div class="header__title">{{{store.name}}}</div>
           <div class="header__descr">Ресторан</div>
         </div>
       </div>
@@ -69,6 +69,7 @@
         <div class="footer__top">
           <div class="informaton__data informaton__data-footer">
             <div class="footer__title">Інформація про заклад</div>
+            {% if variables.WIFIpassword %}
             <div class="information-item">
               <div class="information-item__icon">
                 <img src="/maksymtarasovdark/img/icons/wifi.svg" alt="wifi" />
@@ -80,9 +81,11 @@
                 </div>
               </div>
             </div>
+            {% endif %}
+            {% if variables.workingHours %}
             <div class="information-item">
               <div class="information-item__icon">
-                <img src="/maksymtarasovdark/img/icons/watch.svg" alt="wifi" />
+                <img src="/maksymtarasovdark/img/icons/watch.svg" alt="watch" />
               </div>
               <div class="information-item__text">
                 <div class="information-item__title">Робочий час:</div>
@@ -91,18 +94,25 @@
                 </div>
               </div>
             </div>
+            {% endif %}
           </div>
     
           <div class="footer-info">
             <div class="footer-info__contacts">
               <div class="footer__title">Контактні дані</div>
               <ul>
+                {% if variables.address %}
                 <li>{{{variables.address}}}</li>
+                {% endif %}
+                {% if variables.phone %}
                 <li>{{{variables.phone}}}</li>
+                {% endif %}
+                {% if variables.email %}
                 <li>
                   <a class="link-bold" href="{{{variables.email}}}">
                     {{{variables.email}}}</a>
                 </li>
+                {% endif %}
               </ul>
             </div>
             <div class="footer-info__time">
