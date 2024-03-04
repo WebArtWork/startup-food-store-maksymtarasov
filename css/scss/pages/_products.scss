@@ -1,5 +1,6 @@
 /*-------------main-------------*/
 .main-container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 0 14px;
@@ -27,7 +28,7 @@
   // top: 120px;
   top: 0;
   width: 272px;
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 10px);
   overflow: auto;
   flex-shrink: 0;
   padding-top: 40px;
@@ -76,13 +77,54 @@
   }
 }
 
+.menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 30px;
+
+  &__popular,
+  &__favorite {
+    display: flex;
+    flex-basis: 50%;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    color: $white;
+
+    &:hover div {
+      color: $green;
+    }
+
+    & g {
+      fill: $green;
+    }
+  }
+}
+
+.decoration-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 272px;
+  height: 40px;
+  background-color: $dark-main;
+  z-index: 999;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
 .accordeon {
   &__button {
     width: fit-content;
   }
 
   &__dish {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     font-weight: 700;
 
@@ -473,23 +515,6 @@
   align-items: center;
 }
 
-// .close::before,
-// .close::after {
-//   content: "";
-//   position: absolute;
-//   width: 2px;
-//   height: 20px;
-//   background-color: $white;
-// }
-
-// .close::before {
-//   transform: rotate(45deg);
-// }
-
-// .close::after {
-//   transform: rotate(-45deg);
-// }
-
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -512,6 +537,25 @@
 
 /*-------------menu-top-------------*/
 //Для моб версії
+.menu-btn-top {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 15px 0;
+
+  .menu-btn__popular,
+  .menu-btn__favorite {
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+  }
+}
+
 .menu-top {
   display: none;
   // position: sticky;
@@ -592,32 +636,6 @@
   &__descr-link.active {
     color: $green;
     border: 1px solid $green;
-  }
-}
-
-.product {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 1px solid $dark-gray;
-  border-top: 2px solid $dark-gray;
-  margin: 0 -14px;
-
-  &-popular,
-  &-favorite {
-    display: flex;
-    flex-basis: 50%;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 24px;
-    padding: 12px;
-  }
-
-  &-popular {
-    border-right: 1px solid $dark-gray;
   }
 }
 
