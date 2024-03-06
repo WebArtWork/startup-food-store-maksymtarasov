@@ -57,7 +57,9 @@
         </a>
         <div class="header__text">
           <div class="header__title">{{{store.name}}}</div>
-          <div class="header__descr">Ресторан</div>
+          <div class="header__descr">
+			<!-- Ресторан -->
+		</div>
         </div>
       </div>
     </header>
@@ -68,7 +70,7 @@
       <div class="container footer__inner">
         <div class="footer__top">
           <div class="informaton__data informaton__data-footer">
-            <div class="footer__title">Інформація про заклад</div>
+            <div class="footer__title">{{{translate('maksymtarasovdark.About us')}}}</div>
             {% if variables.WIFIpassword %}
             <div class="information-item">
               <div class="information-item__icon">
@@ -88,7 +90,7 @@
                 <img src="/maksymtarasovdark/img/icons/watch.svg" alt="watch" />
               </div>
               <div class="information-item__text">
-                <div class="information-item__title">Робочий час:</div>
+                <div class="information-item__title">{{{translate('maksymtarasovdark.Working hours')}}}:</div>
                 <div class="information-item__descr">
                   {{{variables.workingHours}}}
                 </div>
@@ -96,10 +98,10 @@
             </div>
             {% endif %}
           </div>
-    
+
           <div class="footer-info">
             <div class="footer-info__contacts">
-              <div class="footer__title">Контактні дані</div>
+              <div class="footer__title">{{{translate('maksymtarasovdark.Contacts')}}}:</div>
               <ul>
                 {% if variables.address %}
                 <li>{{{variables.address}}}</li>
@@ -119,10 +121,10 @@
               <div class="footer__title"></div>
             </div>
           </div>
-    
+
           {% if variables.link_instagram %}
           <div class="footer-social">
-            <div class="footer__title">Ми в соцмережах</div>
+            <div class="footer__title">{{{translate('maksymtarasovdark.We are in social networks')}}}</div>
             <ul>
               {% if variables.link_instagram %}
               <li>
@@ -141,14 +143,14 @@
             </ul>
           </div>
         </div>
-    
+
         <div class="footer__line"></div>
-    
+
         <div class="container footer__inner">
           <div class="footer-copyright">
             <div class="footer-copyright__copy">&copy; 2024 {{{store.name}}}</div>
             <div class="footer-copyright__list">
-              <a href="#" class="footer-copyright__item">Політика використання файлів cookie</a>
+              <!-- <a href="#" class="footer-copyright__item">Політика використання файлів cookie</a> -->
             </div>
           </div>
         </div>
