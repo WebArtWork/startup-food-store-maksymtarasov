@@ -112,7 +112,7 @@
 						<div class="food-item__price">
 							<span>{{{product.price}}}</span> {{{currency}}}
 						</div>
-						<div class="food-item__descr">{{{product.descr}}}</div>
+						<!-- <div class="food-item__descr">{{{product.descr}}}</div> -->
 						<div class="food-item__weight">
 							<div class="food-item__weight-img">
 								<img src="/maksymtarasovdark/img/icons/weight.svg" alt="weight" />
@@ -127,7 +127,7 @@
 						</div>
 					</div>
 					<div class="food-item__right">
-						<img src="{{{product.thumb}}}" alt="" />
+						<img src="{{{product.preview || product.thumb}}}" alt="" />
 					</div>
 				</div>
 				{% endfor %}
@@ -265,7 +265,7 @@
 				<div class="food-item__price">
 					<span>{{{ product.price }}}</span> {{{currency}}}
 				</div>
-				<div class="food-item__descr">{{{ product.descr }}}</div>
+				<div class="food-item__descr">{{{ product.description }}}</div>
 				<div class="food-item__weight">
 					<div class="food-item__weight-img">
 						<img src="/maksymtarasovdark/img/icons/weight.svg" alt="weight" />
