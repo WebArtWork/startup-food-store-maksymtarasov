@@ -1,0 +1,22 @@
+.page__disabled {
+  display: flex;
+  flex-direction: column; // Stack children vertically
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #000; // Black background for the container
+  color: #fff; // White text for the container
+  padding: 20px; // Add some padding around the edges
+
+  h1 {
+    color: #FFCC00; // Gold color for the heading
+    margin-bottom: 20px; // Add space below the heading
+  }
+
+  p {
+    max-width: 600px;
+    margin: 10px auto; // Add some space above and below each paragraph
+    line-height: 1.6;
+  }
+}
