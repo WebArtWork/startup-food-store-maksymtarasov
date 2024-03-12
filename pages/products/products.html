@@ -52,6 +52,10 @@
 			</a>
 		</div> -->
 		<div class="menu-top__descr">
+			<a href="/" class="menu-top__descr-link">{{{translate('maksymtarasovdark.Menu')}}}</a>
+			<a href="/favorites" class="menu-top__descr-link">{{{translate('maksymtarasovdark.Favorites')}}}</a>
+		</div>
+		<div class="menu-top__descr" style="top: 60px; padding-top: 10px;">
 			{% for tag in tags %}
 				<a href="#{{{tag._id|string}}}" class="menu-top__descr-link">{{{tag.name}}}</a>
 			{% endfor %}
@@ -71,6 +75,33 @@
 				</a>
 			</div> -->
 
+			<div class="accordeon">
+				<div class="accordeon__item">
+					<div class="accordeon__button">
+						<a href="/">
+							<div class="accordeon__dish">{{{translate('maksymtarasovdark.Menu')}}}</div>
+						</a>
+					</div>
+					<!-- <ul class="accordeon__list">
+						{% for listItem in item.list %}
+						<li><a href="#">{{{ listItem.name }}}</a></li>
+						{% endfor %}
+					</ul> -->
+				</div>
+				<div class="accordeon__item">
+					<div class="accordeon__button">
+						<a  href="/favorites">
+							<div class="accordeon__dish">{{{translate('maksymtarasovdark.Favorites')}}}</div>
+						</a>
+					</div>
+					<!-- <ul class="accordeon__list">
+						{% for listItem in item.list %}
+						<li><a href="#">{{{ listItem.name }}}</a></li>
+						{% endfor %}
+					</ul> -->
+				</div>
+			</div>
+			<hr />
 			<div class="accordeon">
 				{% for tag in tags %}
 				<div class="accordeon__item">

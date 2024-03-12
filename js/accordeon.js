@@ -24,13 +24,12 @@ accordeonItems.forEach((accordeonItem) => {
 
         if (currentText.classList.contains('accordeon__list--visible')) {
             currentText.style.maxHeight = currentText.scrollHeight + 'px';
-            
+
             accordeonDish.classList.add('accordeon__dish--active');
         } else {
             currentText.style.maxHeight = null;
-            
+
             accordeonDish.classList.remove('accordeon__dish--active');
         }
     });
 });
-
